@@ -1,0 +1,73 @@
+WEBVTT
+
+00:01.760 --> 00:07.820
+Before we move on let's take a look at what we've done in this section and this was a very long section.
+
+00:07.820 --> 00:12.880
+I know but we learned a lot about our ideas and how to work with our.
+
+00:12.900 --> 00:14.210
+Yes.
+
+00:14.210 --> 00:20.590
+So in this section we first set up our project with PI charme ID.
+
+00:20.630 --> 00:22.280
+We created our project.
+
+00:22.280 --> 00:31.000
+We set our Python interpreter and everything and then we configured and launched on our D.S. Pasqua
+
+00:31.000 --> 00:32.260
+sequel instance.
+
+00:32.340 --> 00:41.460
+And to do that we had to create a security group and if we used the easy two way or the BPC way of the
+
+00:41.460 --> 00:48.890
+subnets we we first have to provide the sublets and the PC IDs for that security group.
+
+00:48.960 --> 00:56.610
+And the purpose the way that we do this was because we had to allow incoming connections to our RLDS
+
+00:56.670 --> 00:57.630
+instances.
+
+00:57.900 --> 01:05.250
+And in case this is going to be a private TV you may choose to not provide any incoming connections
+
+01:05.250 --> 01:07.760
+to your RLDS instance.
+
+01:07.870 --> 01:16.570
+And after that we checked out the Aria's instance that we launched on AWOS console and then we learn
+
+01:16.570 --> 01:24.370
+how we could describe our audience instance with API calls and then we modified our master user password
+
+01:24.370 --> 01:31.470
+and verified it while trying to log into our DV instance with pos Tiko client.
+
+01:31.930 --> 01:39.400
+And then we added tax of course we added tax when we launch our RLDS instance in the first place and
+
+01:39.400 --> 01:47.530
+we learn how to take a back up or take a snapshot of our D.S. instance and then we simply restore that
+
+01:48.140 --> 01:48.850
+instance.
+
+01:49.000 --> 01:58.990
+And then finally we deleted our RLDS instance altogether from AWOS and I believe this was a very great
+
+01:59.180 --> 02:05.060
+we're hands on section and on all of the calls about is hand-sewn actually.
+
+02:05.080 --> 02:11.810
+So I believe you learned a lot about our ideas and how you can get up to two lounging production great
+
+02:11.970 --> 02:14.750
+ideas instances with this knowledge.
+
+02:14.920 --> 02:16.570
+So I'll be seeing you on the next section.

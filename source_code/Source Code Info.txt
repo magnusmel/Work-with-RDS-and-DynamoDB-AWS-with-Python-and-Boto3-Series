@@ -1,0 +1,3 @@
+Source Code also available at:
+https://github.com/neocorp/manage_dynamodb
+https://github.com/neocorp/manage_rds

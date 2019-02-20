@@ -1,0 +1,43 @@
+WEBVTT
+
+00:01.970 --> 00:08.350
+Before we jump into our implementations with Emily let's take a moment to check out the both of the
+
+00:08.570 --> 00:10.260
+API documentation.
+
+00:10.760 --> 00:19.190
+So as you can see I know he has a huge list of methods to manipulate your tables and everything in between
+
+00:19.190 --> 00:19.860
+them.
+
+00:19.910 --> 00:27.800
+So as you can see you can use backup methods you can delete tables you can create tables and you can
+
+00:27.800 --> 00:36.590
+do stuff with Nemo deeply and if you just go to one of those methods as like create a table you can
+
+00:36.590 --> 00:44.900
+see that it is a very nice documentation about vitamin D and how we can work with it and you can also
+
+00:44.900 --> 00:51.140
+see the parameters and what they are required for or even if they are optional or required.
+
+00:51.140 --> 00:59.210
+And finally after three parameters you can see the return syntax for this method which is really nice
+
+00:59.210 --> 01:02.600
+because you can simply type your implementation.
+
+01:02.660 --> 01:09.640
+You can simply write your implementation against this return type return dictionary actually.
+
+01:09.730 --> 01:17.720
+So both of free has a really cool and really nice API for dynamic deviation and you can go and check
+
+01:17.720 --> 01:21.980
+this API at Boville 3.3 Darkstar.
+
+01:22.330 --> 01:24.600
+And then searching for dynamic ADP.

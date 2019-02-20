@@ -1,0 +1,130 @@
+WEBVTT
+
+00:02.690 --> 00:11.240
+Show while we're making our implementation we're going to use a great helping hand from PI both of three.
+
+00:11.240 --> 00:19.760
+So what's it about pi both three PI both of three as you can see is a pythonic interface for AWOS both
+
+00:19.760 --> 00:20.450
+of three.
+
+00:20.570 --> 00:28.470
+That gives you all to complete on every service and you just didn't hurt or misunderstood it.
+
+00:28.520 --> 00:36.200
+It is autocomplete feature for Python and both are three implementations and if we go down here and
+
+00:36.200 --> 00:43.970
+as you can see if you define your type using pi both the three you can get the autocomplete beauty of
+
+00:44.270 --> 00:47.770
+Python Id actually the PI charme ID.
+
+00:47.900 --> 00:52.760
+And this is a beautiful way and a great way to implement python.
+
+00:52.790 --> 00:55.290
+And both are three four AWOS.
+
+00:55.760 --> 01:02.900
+And as you can see you can see the definitions and descriptions of methods using the shortcuts and you
+
+01:02.900 --> 01:10.160
+can just give yourself a huge relief while implementing Python with both of three.
+
+01:10.280 --> 01:17.200
+So all you have to do is Pipp install pide both three and you can just import both those three.
+
+01:17.330 --> 01:22.760
+And then you can use it with PI both or three as your autocomplete.
+
+01:22.760 --> 01:30.110
+So since I already have the PI both free and you can just simply install using Pipp install py both
+
+01:30.120 --> 01:30.970
+are free.
+
+01:31.010 --> 01:38.300
+I'm just going to go back to my ID and to see to give you a feel of what it looks like and what it feels
+
+01:38.300 --> 01:38.790
+like.
+
+01:38.930 --> 01:45.630
+So let's switch back to our ID and I'm going to create my R D S class.
+
+01:45.950 --> 01:50.580
+So I'm going to create a new file as namely.
+
+01:50.650 --> 01:51.400
+Yes.
+
+01:51.680 --> 02:01.910
+And within that file I'm just going to define my art class and for my RDX class first thing that I have
+
+02:01.910 --> 02:05.620
+to do is to get the client implementation of.
+
+02:05.710 --> 02:10.070
+Yesterday i just did here with the Klein factory.
+
+02:10.310 --> 02:18.290
+So within that initialiser method what I'm going to do is I'm going to pass in the client while I'm
+
+02:18.290 --> 02:26.810
+calling this RLDS class and I'm going to inject declined to the client that I'm going to receive from
+
+02:26.810 --> 02:28.000
+that method call.
+
+02:28.010 --> 02:36.770
+So I'm going to say self-taught underscore client equals the client and the most important part in this
+
+02:36.770 --> 02:41.030
+lecture with the PI both are three autocomplete part.
+
+02:41.030 --> 02:49.460
+So to have that capability I'm going to go down under my self-doubt client equals client expression
+
+02:50.150 --> 02:54.440
+and I'm going to put in three double quotes as you can see.
+
+02:54.620 --> 03:02.930
+And within those double quotes I'm going to say type and as you can see IDs are completing and I can
+
+03:03.620 --> 03:10.320
+say that PI both three dot are yes just like that.
+
+03:10.340 --> 03:16.590
+This is all you have to do to have the PI both three capability for your ID.
+
+03:16.820 --> 03:24.370
+So let's just create a simple method test method so that we can see how this works.
+
+03:24.380 --> 03:32.030
+So I'm just going to call my client first of course and self-doubt underscore client and then when I
+
+03:32.030 --> 03:38.740
+hit dot as you can see it is already up to completing my RTX client.
+
+03:38.810 --> 03:48.620
+And as you can see Adderall to D-B cluster apply painting maintenance action and I can simply call any
+
+03:48.620 --> 03:57.950
+of the methods from my both or three API documentation and the best part is when I hit enter you can
+
+03:57.950 --> 04:05.750
+get the full mirthfulness full argument of the method you can work your way up from there just like
+
+04:05.750 --> 04:06.770
+that.
+
+04:06.800 --> 04:12.330
+It's a beautiful implementation with the Python and both all three.
+
+04:12.380 --> 04:19.400
+So you definitely have to use this while implementing anything with Python and both of three we're going
+
+04:19.400 --> 04:26.120
+to be making use of this within our lectures for both yes and Dynamo the.

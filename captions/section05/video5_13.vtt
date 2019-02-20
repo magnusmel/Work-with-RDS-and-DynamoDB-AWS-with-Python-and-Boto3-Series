@@ -1,0 +1,157 @@
+WEBVTT
+
+00:01.820 --> 00:05.290
+So we know how to take a snapshot of our database.
+
+00:05.540 --> 00:10.180
+But how about restoring our D-B in case of a failure.
+
+00:10.190 --> 00:17.120
+Let's say Ardi is corrupted and we want to go back to a previous state previous snapshot that we took
+
+00:17.120 --> 00:20.210
+earlier how we do that.
+
+00:20.210 --> 00:32.330
+To do that let's just go to our RLDS class and after our take backup method let's just say restore D-B
+
+00:33.710 --> 00:38.290
+from snapshot back backup.
+
+00:38.300 --> 00:40.410
+All right.
+
+00:40.410 --> 00:49.280
+So there are like weariest ways to take a snapshot take a recovery from your D-B instance and let's
+
+00:49.280 --> 00:50.880
+see what those are.
+
+00:51.350 --> 00:56.810
+Let's just return self-taught Klein dot and Taiping restore.
+
+00:56.810 --> 01:05.060
+And as you can see you can simply restore D-B clusters from S-3 and sequel files and you can again do
+
+01:05.060 --> 01:13.370
+those cluster recovery glossaries are actually from a snapshot and you can take a point in time recovery
+
+01:13.490 --> 01:18.510
+and to do that with your audience instances and you can.
+
+01:18.590 --> 01:24.890
+And the way that we're going to use is restore a D-B instance from an existing D-B instance.
+
+01:25.010 --> 01:29.660
+So let's just pick that method and let's see what we're going to need.
+
+01:29.810 --> 01:36.480
+So we're going to need a D-B instance identifier that we want to restore to a previous state.
+
+01:36.560 --> 01:40.990
+And we're of course going to need a DB snapshot identifier.
+
+01:41.390 --> 01:47.060
+And as you can see you can be worried specifically about your tags and storage types for your specific
+
+01:47.060 --> 01:48.140
+recoveries.
+
+01:48.170 --> 01:54.150
+So it's a really useful way to go back to a previous state by W-S.
+
+01:54.200 --> 02:02.990
+So let's just pass in a D-B instance identifier and from the method signature I'm going to pass in the
+
+02:02.990 --> 02:09.520
+identifier and also I'm going to say D-B snapshot identifier.
+
+02:11.220 --> 02:12.570
+And that's it.
+
+02:12.570 --> 02:21.900
+So let's just pass in the arguments and the snapshot identifier as the snapshot identifier just like
+
+02:21.900 --> 02:23.420
+that.
+
+02:23.430 --> 02:26.800
+So let's go back to our deployment method.
+
+02:27.000 --> 02:37.650
+And from there let's just say restore D-B and within that restore the method let's just call RTX client
+
+02:38.100 --> 02:41.040
+and restore D-B from back up.
+
+02:41.040 --> 02:49.500
+So what we're going to do is we're going to use our instance identifier and we're going to go back to
+
+02:49.530 --> 02:56.370
+the first backup of our database which was produced by a W-S itself automatically.
+
+02:56.370 --> 03:03.510
+So let's go to a W-S console and from there let's go to snapshots.
+
+03:03.840 --> 03:07.260
+And as you can see our previous snapshot is already available.
+
+03:07.620 --> 03:14.040
+And let's just go back to our very first backup which was to buy a W-S.
+
+03:14.040 --> 03:21.670
+So this is capitis name this identifier of this snapshot.
+
+03:21.880 --> 03:24.660
+And I'm just simply going to copy this.
+
+03:24.730 --> 03:29.110
+And let's just go back and paste it just like that.
+
+03:29.140 --> 03:37.090
+So this is going to restore our database to a previous state the very first day that before we launch
+
+03:37.180 --> 03:38.820
+our DBI.
+
+03:38.830 --> 03:44.740
+So let's just call the restore D-B method and let's just run this
+
+03:48.340 --> 03:55.770
+and as you can see Amazonas throwing an exception saying that the D-B instance already exists so we
+
+03:55.770 --> 04:00.090
+can't just restore our D-B to an existing D-B instance.
+
+04:00.210 --> 04:05.350
+So we want to have to launch another D-B instance for our restoring purposes.
+
+04:05.760 --> 04:11.080
+So to do that we're going to have to change our D-B instance identifier.
+
+04:11.100 --> 04:17.080
+So I'm going to say my pulse questi be frob snapshot.
+
+04:17.270 --> 04:18.100
+All right.
+
+04:18.240 --> 04:19.980
+So if I had run again
+
+04:23.770 --> 04:32.160
+and here we go our Freestar process must be started on a W-S Let's go and check it out.
+
+04:32.360 --> 04:41.270
+And on the instances section as you can see and the RDL instance is being created by us and with the
+
+04:41.270 --> 04:44.900
+name that we provided as the D-B instance name.
+
+04:45.200 --> 04:51.460
+So this is science that is being created from the very first snapshot from A W-S.
+
+04:51.470 --> 04:59.660
+So in case you have a failure with your D-B instances you can simply go back and recreate and restore
+
+04:59.660 --> 05:03.630
+your D-B data and everything about your D-B instances.

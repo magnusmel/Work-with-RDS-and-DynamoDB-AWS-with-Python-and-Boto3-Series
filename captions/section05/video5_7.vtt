@@ -1,0 +1,301 @@
+WEBVTT
+
+00:01.290 --> 00:02.610
+All right.
+
+00:02.610 --> 00:08.100
+So these are all the submit ideas that I need for my D-B creation.
+
+00:10.240 --> 00:18.560
+And no I can get back to what I was doing and which is the launching a post-career sequel instance.
+
+00:18.640 --> 00:24.270
+So let's go down to the method and let's just check out the parameters.
+
+00:24.310 --> 00:30.530
+So the first thing that I have to provide is a database name for my database name.
+
+00:30.550 --> 00:36.570
+I'm going to say my pulse great sequel database.
+
+00:36.580 --> 00:38.320
+All right.
+
+00:38.620 --> 00:50.990
+And for a database instance identifier I'm going to say my pulse gray post-trade the be all right.
+
+00:51.870 --> 01:00.750
+And after that I'm going to have to provide a D-B instance class and the D-B instance class is of course
+
+01:00.990 --> 01:08.010
+going to be a free tier D and which is just the the dot T-2 dot micro.
+
+01:08.010 --> 01:16.050
+If you try to launch any other thing than D-B to D-B dot to the micro you're going to be charge and
+
+01:16.290 --> 01:18.760
+you're just going to have to be careful about that.
+
+01:19.320 --> 01:25.730
+And for the engine of that TV I'm going to say to simply postscripts.
+
+01:25.840 --> 01:26.800
+All right.
+
+01:27.630 --> 01:37.500
+And with the engine version I'm just going to say the engine version is going to be 9 out 6.6 and for
+
+01:37.530 --> 01:45.300
+all the values of these parameters for this D-B launching for Pasqua sequel you can thoroughly check
+
+01:45.300 --> 01:50.550
+out the both or three documentation and of course AWOS itself.
+
+01:51.420 --> 02:00.720
+And for the pt. s. I'm going to simply use the default port for our D.S. post-career sequel instance
+
+02:01.800 --> 02:09.780
+and the other thing that I need is a master username and for the master username I'm just simply going
+
+02:09.780 --> 02:14.310
+to use Pulse Chris and for my master password.
+
+02:14.850 --> 02:18.690
+I'm going to say my post-play
+
+02:22.350 --> 02:24.450
+and password.
+
+02:24.450 --> 02:25.280
+All right.
+
+02:26.920 --> 02:32.720
+And the other thing that I want to allocate is the storage itself.
+
+02:32.770 --> 02:43.000
+So for the storage I'm going to simply say 20 gigs of this size for my D-B instance and the next thing
+
+02:43.000 --> 02:49.360
+that I want to say I don't want any multi availabilities zone deployment for my D-B instance since this
+
+02:49.360 --> 02:55.840
+is going to be a simple development TB and of course you can with your production the base production
+
+02:55.840 --> 03:04.900
+level the actually have to use the Malte availability on deployments and 40 storage type.
+
+03:05.320 --> 03:10.300
+I'm going to simply say I want to a general propose as is the storage.
+
+03:10.360 --> 03:17.150
+I don't want the high troop worth IOPS or anything else since this is just the development D-B.
+
+03:17.440 --> 03:26.910
+And so I want my to be accessible from public resources I can just simply say publicly accessible and
+
+03:26.920 --> 03:31.740
+through but just saying the publicly accessible is not enough.
+
+03:31.750 --> 03:36.700
+We created our D-B Security Group and added and in-bound rule.
+
+03:36.820 --> 03:43.060
+If you don't do that you win if you say that you want a publicly accessible Ardis instance you won't
+
+03:43.060 --> 03:45.520
+be able to access your audiences.
+
+03:45.560 --> 03:46.670
+So right.
+
+03:46.690 --> 03:48.440
+Just be careful about that.
+
+03:48.850 --> 03:55.340
+And the other thing that I have to provide is the PC security group ids.
+
+03:55.690 --> 04:04.480
+So since this is a list of IDS I have to provide it within a list and I have to get the security group
+
+04:04.540 --> 04:09.490
+ID from my method which is right below my.
+
+04:10.240 --> 04:14.050
+As you can see here create D-B security group and add rules.
+
+04:14.080 --> 04:18.030
+So this method is returning the security group ID.
+
+04:18.040 --> 04:30.880
+So let's just make a quick call that this method Security Group ID and self-taught create D-B security
+
+04:30.880 --> 04:32.410
+group and add rules.
+
+04:32.500 --> 04:33.820
+All right.
+
+04:33.820 --> 04:37.940
+So this is going to you media security group that I need.
+
+04:37.990 --> 04:48.310
+And before we finish before we wrap this up let's just also say the D-B submit group name and that subnet
+
+04:48.310 --> 04:55.710
+group name is of course RLDS D-B subnetwork name that I am going to create.
+
+04:55.960 --> 05:08.460
+And with the attacks I'm going to say within a list of elements and the first element is with the key
+
+05:08.510 --> 05:10.320
+available CIM of hers.
+
+05:10.570 --> 05:16.270
+I'm going to say key is name and de-value is
+
+05:19.490 --> 05:24.380
+let's just type in my own name and post.
+
+05:25.380 --> 05:26.140
+Sequel
+
+05:28.470 --> 05:29.300
+instance.
+
+05:29.310 --> 05:31.210
+All right.
+
+05:31.590 --> 05:37.800
+So this is basically everything that we need to create our already Yes instance
+
+05:43.990 --> 05:52.750
+so to test things out to lounge and RLDS instance this is create a simple test class and let's just
+
+05:52.750 --> 05:55.000
+name it test deployment.
+
+05:55.000 --> 05:55.930
+All right.
+
+05:56.470 --> 06:03.760
+And with that test deployment class what I'm going to do is I'm going to deploy my resources within
+
+06:03.760 --> 06:08.450
+a single method just couple of method calls.
+
+06:08.540 --> 06:20.600
+So let's just say I want to deploy my resources within a single method to deploy resources and within
+
+06:20.600 --> 06:28.010
+that method I'm going to need the artist client for my debut launching and that's simply everything
+
+06:28.010 --> 06:30.340
+I need to call this method.
+
+06:30.560 --> 06:43.940
+So let's just take the RDX client from SIRC and Clive factory our client and of course from SIRC Dot
+
+06:44.030 --> 06:48.080
+are yes and RLDS itself.
+
+06:48.110 --> 06:50.090
+All right.
+
+06:50.090 --> 07:00.830
+So this is everything I need to launch my D-B instance and for my RLDS client let's just say RTX client
+
+07:02.210 --> 07:07.260
+and get client and RLDS is going to be simple.
+
+07:07.280 --> 07:16.460
+So ARDE Yes and I'm going to pass in the RDF client inside it so I can just simply call them my RLDS
+
+07:17.090 --> 07:21.960
+create post-career sequel instance method just like that.
+
+07:21.980 --> 07:36.890
+So and maybe I can just print out that I'm launching an art class instance creating RDX post-K sequel
+
+07:37.250 --> 07:39.740
+instance.
+
+07:39.770 --> 07:40.740
+All right.
+
+07:41.000 --> 07:50.960
+And to call this method I'm going to simply going to need a main method and I can just say deploy resources
+
+07:51.170 --> 07:51.910
+just like that.
+
+07:51.920 --> 07:54.650
+And let's just give it a line break here.
+
+07:54.770 --> 08:02.210
+So we're now ready to test out our method for lounging and Ardelia's instance.
+
+08:02.330 --> 08:09.680
+So if we go here and Tron and let's see what's going to happen.
+
+08:09.730 --> 08:10.660
+All right.
+
+08:10.660 --> 08:18.360
+Our Amazon RLDS says and oops we have a problem with our PC
+
+08:20.960 --> 08:30.970
+so this is only because that we simply forgot to call our create subnet group method and it's this method
+
+08:31.010 --> 08:35.090
+and we simply forgot to create our D-B subnet group.
+
+08:35.180 --> 08:46.640
+So let's go down here within the Create Pasqua sequel instance and this is create subnet group and within
+
+08:46.640 --> 08:52.980
+that let's just call self-taught create an D-B subnet group.
+
+08:53.000 --> 09:03.480
+So let's also print out debt we're creating DP subnet group and just like that.
+
+09:03.500 --> 09:14.820
+So let's just go and let's just try to call this and but before we go and do dat let's just go back
+
+09:14.850 --> 09:20.770
+and delete our resources for our security group.
+
+09:21.080 --> 09:33.290
+So let's just go to a W-S console like now and and go to E C too so that we don't have the conflicting
+
+09:33.290 --> 09:40.160
+resources and we can successfully create our security groups and resources.
+
+09:40.160 --> 09:44.170
+So as you can see our public security group is right there.
+
+09:44.300 --> 09:49.380
+And if I go here are the actions and delete the security crew.
+
+09:49.550 --> 09:51.270
+And here we go.
+
+09:51.320 --> 10:00.580
+So let's go back and let's just redrawn our application and I'm going to hit one.
+
+10:00.740 --> 10:09.590
+And as you can see all of our resources are almost created and you can check out from the last statement
+
+10:09.590 --> 10:15.300
+that we printed out here that are RDR security group is created.
+
+10:15.470 --> 10:23.090
+And we could successfully at the inbound accessible to our security group and we created our own D-B
+
+10:23.090 --> 10:29.600
+subnet group and our post-career sequel already instance is now being launched.
+
+10:29.630 --> 10:37.100
+So this is everything that we're going to do to lounge and RLDS instance and in the next video we're
+
+10:37.100 --> 10:41.250
+going to check out our RLDS instance on AWOS Konsole.

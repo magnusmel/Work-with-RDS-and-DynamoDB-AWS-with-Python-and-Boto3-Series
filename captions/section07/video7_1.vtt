@@ -1,0 +1,91 @@
+WEBVTT
+
+00:01.590 --> 00:07.120
+So before we wrap things up with our audience and Dynamo D-B course.
+
+00:07.320 --> 00:14.580
+Let's take a look at what we learned in this course and what happened and what we actually implemented.
+
+00:16.200 --> 00:23.190
+In those scores we first started to learn how to create our own AWOS API credentials.
+
+00:23.190 --> 00:28.340
+And these were like the Access Key ID and the secret access key.
+
+00:28.440 --> 00:31.920
+With the help of a WSC a lie.
+
+00:32.340 --> 00:41.250
+And after that we installed Python 3 AWOS Seelye and prepared our environment to work with AWOS using
+
+00:41.250 --> 00:43.470
+those credentials.
+
+00:43.470 --> 00:48.430
+And after that we also installed both of three on top of those.
+
+00:48.510 --> 00:55.750
+And we first configured our environment before we jumping into our ID.
+
+00:56.200 --> 01:02.440
+And then we checked out what we're going to build through the curse.
+
+01:02.680 --> 01:11.980
+And after we started our idea to work with our ID we learned how to use autocomplete magic with PI both
+
+01:12.080 --> 01:14.180
+three on PI char MIT.
+
+01:14.230 --> 01:21.280
+And again it is a really useful feature and great shout out to the guys at PI both three for providing
+
+01:21.280 --> 01:28.200
+such a nice interface for autocomplete features of python and both of three.
+
+01:28.380 --> 01:35.460
+And when we finished use learning and using autocomplete features with PIJ on ID we checked out the
+
+01:35.520 --> 01:44.420
+extensive documentation of both three and then we started creating one by one and starting with our
+
+01:44.460 --> 01:48.190
+Yes we first created our RDX instance.
+
+01:48.310 --> 01:50.220
+Then we learned how to describe it.
+
+01:50.260 --> 01:55.860
+Then we updated our already as instance with like changing the master user password.
+
+01:56.050 --> 02:03.920
+And finally we deleted our TS instance but also we learned how to take a snapshot of our art.
+
+02:03.970 --> 02:04.300
+Yes.
+
+02:04.300 --> 02:04.940
+Instance.
+
+02:05.110 --> 02:13.360
+And after that we restored our RDX instance to a previous version or to a previous snapshot version
+
+02:13.660 --> 02:19.930
+of our RLDS instance and learned how to do that with Python and both all three.
+
+02:20.090 --> 02:27.740
+And after we finished with our RLDS implementation we moved on to Dynamo D and then we learned how to
+
+02:27.740 --> 02:35.450
+create a dynamo D-B table how to pro-white the provision throughput and everything else like the key
+
+02:35.450 --> 02:40.140
+schema attribute definitions and everything about dynamo D-B.
+
+02:40.340 --> 02:44.340
+We did all of that with the help of python and both all three.
+
+02:44.570 --> 02:52.260
+And when we created our table after we created it we first describe and learn how to describe our table.
+
+02:52.400 --> 02:57.740
+And finally we updated and deleted our dynamic table.

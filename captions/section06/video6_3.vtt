@@ -1,0 +1,136 @@
+WEBVTT
+
+00:02.030 --> 00:10.730
+So let's get started with Dynamo ODP development for A W-S with Python and both of three and for that
+
+00:10.730 --> 00:14.450
+purpose let's go and create our project first.
+
+00:14.450 --> 00:22.730
+So I'm going to here to create new project on PIJ on my ID and I'm going to name my project as Di Nam
+
+00:22.800 --> 00:26.330
+ODP works.
+
+00:26.340 --> 00:27.130
+All right.
+
+00:27.480 --> 00:35.670
+And for the interpreter as I always do I'm going to use the existing interpreter as Python 3.6.
+
+00:35.670 --> 00:42.420
+And again if he don't see it you can simply click and add it to your ID from the section from this button
+
+00:42.420 --> 00:43.340
+actually.
+
+00:43.380 --> 00:46.490
+So I'm going to hit create.
+
+00:46.490 --> 00:48.120
+And here we go.
+
+00:48.390 --> 00:51.290
+Our project is ready to be working with.
+
+00:51.510 --> 00:58.950
+So the first thing that I'm going to do is I'm going to go and create a new Python package and this
+
+00:58.950 --> 01:00.480
+is going to be the source directory.
+
+01:00.480 --> 01:05.330
+So I'm going to name this package as as RC or source for sure.
+
+01:05.680 --> 01:06.880
+All right.
+
+01:06.960 --> 01:14.940
+And the other thing that I'm going to do is I'm going to implement a little utility the class for manipulating
+
+01:15.090 --> 01:17.430
+my client my dynamo D-B client.
+
+01:17.430 --> 01:18.260
+All right.
+
+01:18.330 --> 01:26.550
+So this class is going to give me the dynamo D-B benefits with a wrapper mindset behind the scenes so
+
+01:26.910 --> 01:31.530
+I'm going to name this class as Klein factory.
+
+01:31.530 --> 01:39.420
+And within this class I'm going to import both all three just for once and then I'm going to refer this
+
+01:39.660 --> 01:46.680
+with my other classes so I don't have to import both all three all the time when I want to use it.
+
+01:46.830 --> 01:57.630
+So I'm going to name my class as client factory and then I'm going to put an initialiser method.
+
+01:57.720 --> 02:05.670
+So this initialiser method is going to accept a client argument so that I can inject my client property
+
+02:06.270 --> 02:09.750
+by all three client property as dynamically.
+
+02:09.750 --> 02:17.670
+So this self-taught underscore client is going to be both all three dot client and I'm going to use
+
+02:17.670 --> 02:26.130
+the client that I'm passing in and then I'm also going to give my region to this Klein declaration and
+
+02:26.340 --> 02:34.290
+the region is going to be EU whereas three or with its name it's Paris.
+
+02:34.290 --> 02:35.010
+All right.
+
+02:35.880 --> 02:42.870
+And what I'm going to do next is I'm going to put a get method for this client sort of I can reach it
+
+02:43.110 --> 02:44.210
+whenever I want.
+
+02:44.220 --> 02:51.690
+So I'm going to put a kit client and this mother is simply going to get me declined that I just create
+
+02:51.690 --> 02:52.130
+it.
+
+02:52.260 --> 02:53.640
+All right.
+
+02:53.640 --> 02:57.390
+So let's create our dynamo D-B client.
+
+02:57.390 --> 03:10.340
+So I'm going to say class dynamo ATP dynamo DP client and I'm going to inject my Collines factory here
+
+03:11.190 --> 03:14.840
+and then I'm going to put my initialize method.
+
+03:14.910 --> 03:21.090
+And within this initialiser method I'm going to call the super so that I can get the benefits of my
+
+03:21.330 --> 03:28.560
+Kaline factory class and then I'm going to initialize with the proper client.
+
+03:28.560 --> 03:32.610
+So in this case it's going to be dynamo DBI.
+
+03:32.790 --> 03:35.270
+All right.
+
+03:35.450 --> 03:38.370
+So this is all about my client.
+
+03:38.370 --> 03:47.060
+Then there is all to do at about my dynamo or D-B client access in the next video we're going to start
+
+03:47.060 --> 03:52.950
+implementing our create update read and delete operations for Dynamo DB.
+
+03:53.030 --> 03:55.000
+So I'll be seeing you on the next videos.

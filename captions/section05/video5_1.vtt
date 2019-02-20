@@ -1,0 +1,31 @@
+WEBVTT
+
+00:01.330 --> 00:08.800
+All right we're about to start our journey with our D.S. or namely the relational database service from
+
+00:08.800 --> 00:11.000
+AWOS.
+
+00:11.210 --> 00:19.240
+Yes we can do many things like launching post-career school instances Amazon or Orah My sequel instances
+
+00:19.570 --> 00:20.590
+and much more.
+
+00:20.710 --> 00:27.040
+And you can even run my sequel from Microsoft and Oracle from Oracle itself.
+
+00:27.950 --> 00:33.570
+And to do all that we're going to start discovering RLDS one by one.
+
+00:33.920 --> 00:42.930
+We're going to first launch our own RLDS instance completely with our plight and implementation.
+
+00:43.150 --> 00:50.110
+And after we finished that we're going to start manipulating our RDA instance and we're of course going
+
+00:50.110 --> 00:56.360
+to learn how to take a backup and how to restore our database from that backup.
+
+00:56.440 --> 01:02.930
+So to check that out to learn how to do all that I'll be seeing you on the next videos.

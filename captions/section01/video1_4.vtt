@@ -1,0 +1,88 @@
+WEBVTT
+
+00:01.650 --> 00:07.360
+So before we jump into our implementation with AWOS and Python and both are three.
+
+00:07.380 --> 00:13.650
+Let's take a look at what I'm expecting you to have for this course and what you need beforehand like
+
+00:13.650 --> 00:16.040
+the prerequisites for this course.
+
+00:16.050 --> 00:20.160
+So the first thing is of course and AWOS account.
+
+00:20.160 --> 00:23.870
+I'm hoping you can have at least a free tier AWOS account.
+
+00:23.880 --> 00:30.290
+And again if your account is available for up to one year so you can get almost all the benefits.
+
+00:30.330 --> 00:36.620
+AWOS What does free account so you don't have to pay anything to a WS and you can play around with the
+
+00:36.840 --> 00:42.310
+things like RLDS by Nemo D-B Lamda and most of the stuff on A W-S.
+
+00:42.360 --> 00:47.700
+It's a great benefit and I hope you already have an account and if you don't I'm going to be showing
+
+00:47.700 --> 00:49.940
+you how to do that in the upcoming lectures.
+
+00:49.950 --> 00:51.110
+Don't worry about it.
+
+00:51.450 --> 00:57.630
+And then of course I'm hoping that you have some basic knowledge of what our ideas and Dynamo are the
+
+00:57.840 --> 00:59.580
+AWOS services are.
+
+00:59.580 --> 01:05.100
+So I'm hoping you have at least some working knowledge of our ideas and Dynamo divi And if you have
+
+01:05.160 --> 01:06.360
+that is awesome.
+
+01:06.360 --> 01:11.990
+Also since we're going to be working with Python I'm hoping you have some basic knowledge of python
+
+01:12.630 --> 01:19.590
+and this means things like how to find your way around in an ID or how to define a variable how to import
+
+01:19.590 --> 01:22.800
+stuff to your class and things like that.
+
+01:22.800 --> 01:29.460
+So this is like the basic stuff very basic stuff on Python and I'm hoping you have this information.
+
+01:29.630 --> 01:33.810
+And also if your experience with Python then that's just great.
+
+01:34.740 --> 01:40.680
+Also since we're going to be working with Python I'm going to need a python ID so that you can have
+
+01:40.680 --> 01:43.160
+it in your computer and you're installed already.
+
+01:43.250 --> 01:49.890
+Or if you don't already you can check out my charm ID from Jepp brains which is the like most preferred
+
+01:49.890 --> 01:53.770
+ID for Python and also has a free community edition.
+
+01:53.910 --> 02:01.290
+And if you're a student upbraids is giving away licenses for edu account emails for students.
+
+02:01.290 --> 02:06.960
+So if you're a student again you definitely have to check this out and get this offer says this offer.
+
+02:06.960 --> 02:10.930
+Covering all the Jeopardy's product not just pie charm ID.
+
+02:10.950 --> 02:17.090
+So without further ado let's just jump into our implementation and starting from preparing our environments
+
+02:17.090 --> 02:18.800
+so I'll see you on the next section.

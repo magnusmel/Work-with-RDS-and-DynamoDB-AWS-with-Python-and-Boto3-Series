@@ -1,0 +1,229 @@
+WEBVTT
+
+00:02.160 --> 00:09.740
+All right I have opened up my pie chart ID so that we can start creating our project for art.
+
+00:09.740 --> 00:10.460
+Yes.
+
+00:10.740 --> 00:19.410
+So first time we're going to do of course to hear it create new project and from the create new project
+
+00:19.410 --> 00:29.610
+screen I'm going to type in the name of my project as our D.S. instances.
+
+00:29.610 --> 00:30.300
+All right.
+
+00:30.300 --> 00:34.590
+And you can of course give it any name that you want for your project.
+
+00:34.710 --> 00:42.390
+And of course for the environment for the Python interpreter I'm going to use my existing interpreter
+
+00:42.480 --> 00:47.700
+and I'm not going to have any other ritual environment because simply I don't need it.
+
+00:47.730 --> 00:53.600
+So I'm going to select my existing interpreter Python 3.6.
+
+00:53.730 --> 00:59.910
+And if you don't have it displayed right here if you can't see it if you can't see your Python installation
+
+01:00.270 --> 01:05.150
+you can always locate it with the environments from your computer.
+
+01:05.700 --> 01:10.640
+And as you can see I have both Python 3 and Python 2.7.
+
+01:10.650 --> 01:18.240
+So if you again don't have this displayed you can always go back and check out the python installation
+
+01:18.240 --> 01:24.660
+section in this course so you can have your environment ready to be working with Already yes.
+
+01:24.660 --> 01:28.830
+So if I just go back and hit create
+
+01:33.140 --> 01:34.250
+here we go.
+
+01:34.520 --> 01:37.120
+Our project is ridded to work with.
+
+01:37.280 --> 01:43.350
+So the first thing that we're going to do is of course create a Python package.
+
+01:43.430 --> 01:51.680
+So for doing that I'm going to hit on our D.S. instances and Right-Click actually and I'm going to create
+
+01:51.740 --> 02:00.200
+a new Python package and I'm just going to name this Python package since this is going to be a source
+
+02:00.200 --> 02:03.840
+directory which is going to be debased record for everything.
+
+02:04.010 --> 02:09.110
+I'm going to give it as RC or source for short and I'm going to do it.
+
+02:09.140 --> 02:10.300
+OK.
+
+02:10.370 --> 02:18.710
+And as you can see I already have the initialiser pie so that it's indicating it's a Python package.
+
+02:18.710 --> 02:19.430
+All right.
+
+02:20.240 --> 02:30.860
+So to be a good utility class and to ease my way into implementing my client for RLDS for actually better
+
+02:30.870 --> 02:38.340
+readability I'm going to have a client class just like I do with my other AWOS courses.
+
+02:38.360 --> 02:46.130
+So for that purpose I'm going to now create a client locator class and within that client locator class
+
+02:46.280 --> 02:54.010
+I'm going to implement my order yes and I'm going to get the reference from my RTX instance from there.
+
+02:54.320 --> 03:02.200
+So I'm going to hit on New python file in my source directory Python package actually.
+
+03:03.020 --> 03:10.160
+And I'm going to say client locator and maybe I can just say Klein factory.
+
+03:10.160 --> 03:18.560
+All right since this is going to be producing me RLDS clients and I'm going to need this naming to better
+
+03:18.560 --> 03:20.310
+understand my purpose.
+
+03:20.360 --> 03:22.890
+So I'm going to hit OK.
+
+03:23.950 --> 03:27.160
+And here we go we have our Klein factory class
+
+03:30.950 --> 03:37.400
+and the first thing that we're going to do is of course import both of three since we're going to use
+
+03:37.400 --> 03:40.330
+both of three for our client implementation.
+
+03:40.340 --> 03:42.090
+We're going to have to import it.
+
+03:42.380 --> 03:45.390
+So I now imported both of three.
+
+03:45.590 --> 03:52.380
+So let's just go down and start implementing our Clyde factory class.
+
+03:52.550 --> 04:01.670
+So class Klein factory and within that class I'm of course going to have an initialiser method.
+
+04:02.210 --> 04:07.570
+So what I'm going to do now is def in it.
+
+04:07.640 --> 04:14.860
+And within that initialiser method I'm going to be passing in a client for my art.
+
+04:14.870 --> 04:15.600
+Yes.
+
+04:15.710 --> 04:26.420
+So with the help of that client I'm going to say self-taught client is going to be both three client
+
+04:26.720 --> 04:32.270
+and I'm going to receive a decline that I just passed into my initialiser method.
+
+04:32.600 --> 04:41.600
+And as the argument to my both three Klein method I'm going to pass in region underscore name and then
+
+04:41.840 --> 04:46.670
+I'm just going to say you west three.
+
+04:46.730 --> 04:48.380
+All right.
+
+04:48.540 --> 04:56.460
+And I'm just going to go down here and write down a get through method for my client.
+
+04:56.460 --> 05:04.200
+So I'm going to say get a client and what this get client meth is simply going to do as it is going
+
+05:04.200 --> 05:05.640
+to return me to.
+
+05:05.660 --> 05:07.390
+DEADEYE just to clear it up there.
+
+05:07.560 --> 05:13.890
+So I'm just going to say self-taught underscore client just like that.
+
+05:13.920 --> 05:19.980
+So this is going to be returning me declined that I need for my RDL implementation.
+
+05:20.920 --> 05:26.530
+So I'm just going to go down here to create underclasses.
+
+05:26.830 --> 05:31.880
+Actually I just need just only one class for my RTX implementation.
+
+05:31.930 --> 05:42.720
+So let's just say RLDS client and I'm just going to pass in the Cline factory and within the initialiser
+
+05:42.730 --> 05:53.050
+method what I'm going to do is I'm going to say super It's because we're asking for Python to initialize
+
+05:53.230 --> 05:55.360
+first the in if method.
+
+05:55.450 --> 06:01.200
+All the Klein factory as you can see here that's why we're calling the super method.
+
+06:01.390 --> 06:09.370
+And of course the initialiser method of this super And I'm just going to pass in the Ardie Yes.
+
+06:09.370 --> 06:18.150
+So this yes argument is going to move past into my initialiser method and injected to the client argument.
+
+06:18.400 --> 06:24.650
+And with that Klimt argument I'm going to be able to have a both or three client for our Yes.
+
+06:24.760 --> 06:29.010
+And of course in the region of EU west three.
+
+06:29.020 --> 06:30.060
+All right.
+
+06:30.280 --> 06:36.120
+So that's everything we're going to have to do for our RLDS Klein factory.
+
+06:36.130 --> 06:37.010
+All right.
+
+06:37.120 --> 06:39.460
+So let's is put a line break here.
+
+06:39.550 --> 06:41.660
+So our ID is not mad at us.
+
+06:41.680 --> 06:48.210
+So this is basically all we have to do to implement RLDS for our next sections.
+
+06:48.430 --> 06:55.630
+So as you can see it is really simple to get a client from both or three for our ideas or simply any
+
+06:55.630 --> 06:57.380
+other client that you want.
+
+06:58.170 --> 06:59.420
+And the next sections.
+
+06:59.590 --> 07:05.620
+We're going to learn to discover the RLDS client implementations with Python.
+
+07:05.770 --> 07:09.250
+So I'll be seeing you on the next video to learn more about it.

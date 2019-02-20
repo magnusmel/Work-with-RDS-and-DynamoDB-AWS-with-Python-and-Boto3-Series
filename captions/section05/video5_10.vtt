@@ -1,0 +1,130 @@
+WEBVTT
+
+00:02.310 --> 00:09.750
+All right says we launch are already Yes instance let's now learn how to describe and how to see the
+
+00:09.750 --> 00:13.830
+detailed information about our RLDS instances.
+
+00:14.220 --> 00:24.270
+And for that purpose within the RDF class I'm going to add a described method right down here and I'm
+
+00:24.270 --> 00:35.370
+going to say def describe instances and within that method I'm going to first of course describing all
+
+00:35.650 --> 00:51.860
+our TS instances and after that I'm simply going to return self-taught client dot describe D-B instances.
+
+00:51.870 --> 00:53.280
+All right.
+
+00:53.280 --> 01:00.810
+And within that method as you can see you can provide the specific D-B instance identifier for that
+
+01:00.810 --> 01:02.320
+specific D-B of yours.
+
+01:02.340 --> 01:11.700
+And you can even provide some filters for like the storage type or the engine version or any other parameter
+
+01:11.700 --> 01:19.960
+that you have to filter out your D-B instances if you have like thousands of bees within your AWOS account.
+
+01:20.070 --> 01:26.880
+But for our purposes since we have just a single database and if you don't provide anything to this
+
+01:26.880 --> 01:32.060
+method since everything is optional we can describe all the instances that we have.
+
+01:32.070 --> 01:35.340
+And in our case it's just the single instance.
+
+01:35.340 --> 01:44.220
+So I'm going to call this method from my deployer class and let's just going to comment out here and
+
+01:45.030 --> 01:53.700
+I'm going to say and of course I'm going to have to pass in the Ardie Yes right here.
+
+01:53.700 --> 02:03.400
+So let's just copy all those and maybe we can simply create a class or a method for deploying our.
+
+02:03.410 --> 02:04.250
+Yes.
+
+02:04.300 --> 02:16.670
+And let's just do that utility class so that we can easily get the yes from our RLDS class get our Yes.
+
+02:16.960 --> 02:21.820
+And this is going to return oste our last client itself.
+
+02:21.820 --> 02:28.160
+So I'm going to copy this and oops sorry about that.
+
+02:28.210 --> 02:32.710
+And let's just copy all that and paste it in right here.
+
+02:32.890 --> 02:34.520
+And let's just return it.
+
+02:36.550 --> 02:37.880
+All right.
+
+02:37.880 --> 02:49.940
+So what we can do now is we can just say describe my instances and I can just simply call the get our
+
+02:49.950 --> 02:53.690
+D.S. method and that I can do what I want to do else.
+
+02:53.770 --> 02:58.030
+And let's just say describe instances.
+
+02:58.050 --> 02:59.250
+All right.
+
+02:59.250 --> 03:03.050
+So let's just call this method and see what we're going to happen.
+
+03:03.130 --> 03:06.370
+But we're going to see within this method declaration.
+
+03:06.540 --> 03:13.060
+All right Allister's fixed those lines right there and
+
+03:15.730 --> 03:16.580
+here we go.
+
+03:17.700 --> 03:21.810
+So let's just hit run and see what's going to happen.
+
+03:24.090 --> 03:29.160
+Of course we forgot to print out the response from a US.
+
+03:29.370 --> 03:34.860
+And so let's just do that right now and let's just wrap it around the string.
+
+03:34.860 --> 03:38.380
+Since this is going to return as a dictionary object.
+
+03:38.490 --> 03:45.230
+So we're going to crash if you don't do that and here we go let's just rerun it.
+
+03:46.520 --> 03:47.810
+And here we go.
+
+03:47.930 --> 03:55.190
+Our Easter's is now being described from a double U.S. with the name my pulse Christy and the engine
+
+03:55.190 --> 04:02.360
+version and the End Point up we can connect to this TB instance and simply you can see that everything
+
+04:02.360 --> 04:08.200
+about our RLDS instance is returned to us from a deal with us.
+
+04:08.330 --> 04:14.030
+You can simply use this information for any of your purposes for your r D.S. instances.
+
+04:14.060 --> 04:22.130
+And again you can simply pass in a filter for any key of this return statement to filter out the elements
+
+04:22.130 --> 04:24.640
+and results for your purposes.

@@ -1,0 +1,157 @@
+WEBVTT
+
+00:02.420 --> 00:08.070
+So how about if you want to update our dynamo D-B table for example.
+
+00:08.120 --> 00:16.490
+We want to increase the read and write capacity or throughput for our dynamo table if for seeing instant
+
+00:16.760 --> 00:22.210
+high accesses for our data and high reads and writes for our data.
+
+00:22.310 --> 00:25.640
+So how we're going to do that to do that.
+
+00:25.910 --> 00:31.970
+Let's go to our dynamic D-B class and from there let's just say update
+
+00:36.100 --> 00:41.240
+Crete right capacity.
+
+00:41.240 --> 00:42.340
+All right.
+
+00:42.430 --> 00:53.020
+And from there I'm going to provide my table name and also what I'm going to do is I'm going to say
+
+00:53.650 --> 00:56.550
+new real capacity.
+
+00:57.970 --> 01:02.530
+And I also say new ride capacity.
+
+01:03.130 --> 01:10.430
+So these are the elements that I'm going to update on my table and let's take out our API documentation.
+
+01:10.450 --> 01:20.710
+But before that let's print out a statement updating provision at throughput
+
+01:25.790 --> 01:31.520
+of table with name and the table name.
+
+01:31.520 --> 01:32.590
+All right.
+
+01:33.170 --> 01:38.770
+So let's just fix that typo right here with the throughput.
+
+01:39.010 --> 01:40.230
+Whoops.
+
+01:43.210 --> 01:49.140
+And so now let's take out the documentation and see what we have to provide.
+
+01:49.390 --> 01:54.740
+Self-taught underscore client and update table.
+
+01:54.850 --> 01:58.420
+This is the method that we're going to use.
+
+01:58.420 --> 02:03.720
+So within this method as you can see we can pro-white lots of different things.
+
+02:03.880 --> 02:11.170
+But one of the required parameters of this method is the table name and we can optionally provide attribute
+
+02:11.170 --> 02:12.210
+definitions.
+
+02:12.370 --> 02:21.490
+We can update our global secondary index and we can update the stream dynamic DBI stream definition.
+
+02:21.490 --> 02:27.530
+So for our case what I'm going to do is I'm going to provide my table name.
+
+02:27.580 --> 02:35.390
+So this is going to be the table that I'm going to update and I'm going to provide a new provision throughput.
+
+02:35.590 --> 02:40.990
+So for the new provision throughput as you can see the type is dictionary.
+
+02:41.050 --> 02:48.400
+So what I'm going to do is I'm going to wrap my properties within a dictionary and I'm going to say
+
+02:48.640 --> 02:53.040
+read capacity units.
+
+02:53.260 --> 02:57.630
+So this is going to be new read capacity.
+
+02:58.940 --> 03:01.370
+Opes let's just fix this typo.
+
+03:01.370 --> 03:08.450
+And so let's also say write capacity units.
+
+03:08.780 --> 03:11.630
+So new right capacity.
+
+03:11.630 --> 03:12.790
+All right.
+
+03:12.980 --> 03:17.570
+So this is basically everything I need to update my table.
+
+03:17.930 --> 03:26.860
+So let's go back to our manager class management class and from there I'm going to add a new method.
+
+03:27.440 --> 03:31.160
+Update table IOPS.
+
+03:31.550 --> 03:39.830
+And within that method what I'm going to do is I'm going to first get the dynamo D-B client and I'm
+
+03:39.830 --> 03:46.970
+going to call the update read write capacity for the table name.
+
+03:47.030 --> 03:56.210
+I'm going to again pro-ID movies so I'm going to updating my table my existing table and forward a new
+
+03:56.210 --> 03:56.880
+provision.
+
+03:56.900 --> 04:05.210
+IOPS since I have five and five for read five for write for initial methods what I'm going to do is
+
+04:05.390 --> 04:11.600
+I'm going to increase this number to 10 for each of the elements for both read and write.
+
+04:11.600 --> 04:19.250
+So let's just call this method and see what's going to happen on AWOS consol.
+
+04:19.310 --> 04:25.050
+So I'm going to go down here and I'm going to say update table IOPS.
+
+04:25.070 --> 04:26.100
+All right.
+
+04:26.750 --> 04:31.390
+So let's hit run and let's see what's going to happen.
+
+04:32.950 --> 04:33.890
+Here we go.
+
+04:34.240 --> 04:38.730
+So our table must have been updated on a W-S.
+
+04:38.950 --> 04:44.830
+Let's go to DAWE AS console and see what's happened with our table.
+
+04:45.250 --> 04:54.850
+So if I just go back to the table and hit refresh I can see that my total read capacity and my total
+
+04:54.850 --> 04:59.390
+right capacity is increased to ten just as I was expecting.
+
+04:59.410 --> 05:03.610
+So we could update our table with ease with this method call.

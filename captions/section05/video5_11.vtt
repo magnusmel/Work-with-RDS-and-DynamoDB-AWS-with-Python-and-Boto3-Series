@@ -1,0 +1,118 @@
+WEBVTT
+
+00:02.610 --> 00:11.400
+Know take a look at how we can modify this D-B instance and to do that I'm going to go to my RLDS class
+
+00:11.550 --> 00:19.440
+and let's just close this and I'm going to go down to my described method and in there I'm going to
+
+00:19.440 --> 00:29.490
+simply say def modify and I simply going to modify my master user password so that I can just refresh
+
+00:29.490 --> 00:41.520
+it from time to time modify master user password and I'm going to pass in my D-B identifier
+
+00:44.040 --> 00:52.700
+and my new password so I can use it while calling my method modifying.
+
+00:52.890 --> 00:55.410
+And let's just print this out.
+
+00:55.410 --> 01:00.530
+Modifying master user password.
+
+01:00.540 --> 01:01.730
+All right.
+
+01:01.720 --> 01:03.440
+Now let's just return.
+
+01:04.590 --> 01:11.660
+Client not modify the instance.
+
+01:11.670 --> 01:12.700
+All right.
+
+01:13.140 --> 01:18.490
+And the first thing that I have to pass in is the D-B instance identifier.
+
+01:18.510 --> 01:22.160
+So let's just say DBI identifier.
+
+01:22.560 --> 01:28.340
+And as you can see we can simply change everything about our our DST instance.
+
+01:28.470 --> 01:33.490
+But in our case I'm just going to replace my password with a new one.
+
+01:33.510 --> 01:39.340
+So let's just say maß user password equals 2 new password.
+
+01:39.360 --> 01:40.390
+All right.
+
+01:40.650 --> 01:48.830
+So let's go to our test employment class and let's just call this method to make use of it.
+
+01:49.050 --> 01:54.080
+So modify master password.
+
+01:54.480 --> 02:03.810
+And what I'm going to do is I'm going to get the R D s client and call the modify master user password
+
+02:04.320 --> 02:11.670
+and for the instance identifier I'm going to go to my instance launching method and I'm going to get
+
+02:11.670 --> 02:16.100
+the D-B instance identifier just like that.
+
+02:16.170 --> 02:22.430
+So I'm going to pass Indes and I'm going to provide a new password.
+
+02:22.680 --> 02:32.720
+My brand new post gray and or my brand new password just like that.
+
+02:32.730 --> 02:37.300
+So this is all I have to do to modify my D-B instance.
+
+02:37.380 --> 02:42.860
+And we can verify this while connecting with the post-IPO client.
+
+02:42.930 --> 02:54.150
+So let's call this method let's just comment this out and modify maß password and let's just hit run.
+
+02:54.370 --> 02:55.620
+And here we go.
+
+02:55.690 --> 02:58.600
+Our execution is already complete.
+
+02:58.720 --> 03:01.860
+And let's go to our post Tiko collide.
+
+03:02.020 --> 03:08.270
+And as you can remember we already have our configuration within the postcode client.
+
+03:08.470 --> 03:16.350
+So if we try to connect to our post-IPO client with our old password we won't be able to do that.
+
+03:16.360 --> 03:25.950
+So let's just try it and as you can see it just simply cannot connect to the pulse he call instance
+
+03:26.580 --> 03:34.500
+and if he again tried to give the old password for our RLDS instance you won't be able to connect to
+
+03:34.500 --> 03:35.020
+it.
+
+03:35.130 --> 03:43.020
+And as you can see password authentication failed for user postchaise and you just simply edit this
+
+03:43.170 --> 03:51.930
+and go back to our new password and copy it and if paste it right here and if he had connect.
+
+03:52.230 --> 03:59.720
+And here we go our master user password is just modify it with just a simple API call.
+
+03:59.760 --> 04:00.780
+Simple as that.

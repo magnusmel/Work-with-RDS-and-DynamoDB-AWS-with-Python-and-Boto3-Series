@@ -1,0 +1,652 @@
+WEBVTT
+
+00:04.490 --> 00:10.660
+All right we can start implementing our RLDS instance creation.
+
+00:11.060 --> 00:16.400
+And for that purpose let's just create a method for that.
+
+00:16.580 --> 00:24.800
+And I'm going to say create and since I'm going to create a post grad school instance I'm going to name
+
+00:24.800 --> 00:31.720
+this method as post gry sequel instance just like that.
+
+00:31.730 --> 00:32.710
+All right.
+
+00:33.170 --> 00:48.400
+And within the method let's first say we're going to be creating a Amazon already Yes post gray sequel
+
+00:49.560 --> 00:51.310
+D-B instance.
+
+00:51.330 --> 00:52.210
+All right.
+
+00:52.380 --> 00:59.760
+So that we we can be declarative about what we're going to do and to know about what we're going to
+
+00:59.760 --> 01:03.070
+need for creating an audience instance.
+
+01:03.510 --> 01:12.090
+Let's just try to tie Pindi method for creating an audience instance so self-taught underscore client
+
+01:12.330 --> 01:20.280
+and create D-B instance this is the exact method that we're going to need for creating in our D.S. instance.
+
+01:20.400 --> 01:26.850
+So I'll hit enter and let's take out the parameters and arguments that we need.
+
+01:26.880 --> 01:33.090
+And as you can see there is a huge list of arguments that we're going to have to provide to these create
+
+01:33.100 --> 01:39.540
+the instance method but not all of them is what we require to be created.
+
+01:39.540 --> 01:48.480
+So let's go back to our Bothell 3 API documentation and see what we actually need and from there I'm
+
+01:48.480 --> 01:58.560
+going to go to create D-B instance method and within that method we can just go down here with the individual
+
+01:58.560 --> 02:06.490
+parameters we can see that we're going to have to provide a db name so that we can refer to that.
+
+02:06.780 --> 02:15.560
+And we're going to have to of course provide a D-B instance identifier like my D-B my production D-B
+
+02:16.020 --> 02:16.980
+et cetera.
+
+02:17.010 --> 02:23.900
+So and after that we can provide the amount of storage for our db.
+
+02:24.060 --> 02:28.430
+And we're going to of course have to pro-ID the instance class.
+
+02:28.470 --> 02:35.400
+This is important because maybe if you're only on the frontier usage of a AWOS you don't want to have
+
+02:35.400 --> 02:42.900
+to launch a DBMS for large D-B instance because that's going to be really costly for you and you're
+
+02:42.900 --> 02:44.500
+going to also have to pro-white.
+
+02:44.520 --> 02:51.300
+And we're going to have to provide the engine for our D-B instance and we're going to of course provide
+
+02:51.300 --> 02:55.810
+the post great sequel engine for our D-B.
+
+02:56.250 --> 03:03.270
+And of course if you want to have a master username and master password for our D-B we're going to have
+
+03:03.270 --> 03:10.580
+to provide a master username and of course we're going to have to pass in a master password.
+
+03:10.860 --> 03:18.540
+And other than that if you want to have the be open to the world or if you want to limit the accessibility
+
+03:18.540 --> 03:25.950
+of this the instance we should definitely have to pass in the D-B security group or if you want to do
+
+03:25.950 --> 03:32.790
+the management of security from the easy to perspective which is what we're going to do in this lecture
+
+03:33.240 --> 03:39.050
+we're going to have to provide the PC security group ids that we're going to create.
+
+03:39.060 --> 03:46.050
+So as you can see we're going to have to be creating a PC to security group so we're going to have to
+
+03:46.050 --> 03:51.530
+add these two to our Klein factory implementation.
+
+03:51.600 --> 04:02.010
+And after that you may we may provide the availabilities on to our D-B instance but if we don't it is
+
+04:02.190 --> 04:08.540
+randomly assigned to an availability on within that region that you are creating your RLDS instance.
+
+04:08.700 --> 04:18.240
+And of course you're going to have to use a D-B subnet group and if you don't provide a D-B subnet group
+
+04:18.450 --> 04:21.710
+then it's going to be a non-GUI PCD instance.
+
+04:21.810 --> 04:32.060
+But in our case we want a B C D B instance so that we can limit the accessibility to that instance and
+
+04:32.390 --> 04:38.740
+the other parameters as you can see are simply optional and we don't have to provide those.
+
+04:38.750 --> 04:47.600
+But of course the port parameter is important so that we can access our D-B instance and if I go down
+
+04:47.630 --> 04:56.540
+here we can provide the multi Asie deployment of our D-B we can provide the engine version and we can
+
+04:56.540 --> 05:00.090
+provide lots of options for RTP instance.
+
+05:00.230 --> 05:09.610
+So let's start one by one 40 require parameters and try to create our beast as.
+
+05:09.720 --> 05:17.580
+So I'm going back to my implementation and the first thing that I have to do is I'm going to have to
+
+05:17.580 --> 05:28.590
+create a VPC security group so to do that I'm going to have to go to my Klein factory and create an
+
+05:28.640 --> 05:30.680
+easy to client.
+
+05:30.690 --> 05:43.230
+So let's just go down here and let's just say Class C to client and pass in the Klein factory and within
+
+05:43.230 --> 05:54.010
+the initialiser method of this class I'm going to call the super and then initialize and pass in.
+
+05:54.060 --> 05:56.100
+Easy to just like that.
+
+05:56.220 --> 06:01.760
+So are easy to client is ready to be made use of.
+
+06:02.010 --> 06:11.820
+So let's go back to our RLDS class and within our RLDS class what we're going to do is we're going to
+
+06:12.330 --> 06:18.230
+create a DB security group for that purpose.
+
+06:18.270 --> 06:33.750
+I'm going to create a new method and I'm going to name it create the security group and add proper rules
+
+06:33.750 --> 06:37.860
+to the security group so that we can access our D-B instance.
+
+06:37.980 --> 06:45.590
+And we tried to within a post-career sequel client or any other database client for accessing post-career
+
+06:45.590 --> 06:46.920
+sequel instances.
+
+06:46.920 --> 06:54.960
+All right so within that met it the first thing that I'm going to do is I'm going to get these two client.
+
+06:55.620 --> 07:02.610
+So easy to client equals easy to client from the client factory class.
+
+07:02.730 --> 07:12.710
+But in order to use it or of course I have to import it and as R C Klein factory of course I'm going
+
+07:12.710 --> 07:25.750
+to say Oops I'm going to delete this line and I'm going to say from as R C Klein factory in pork you
+
+07:25.760 --> 07:27.400
+see too quite.
+
+07:27.560 --> 07:29.490
+Just like that.
+
+07:29.930 --> 07:38.390
+But of course to make use of this easy to client with the help of the autocomplete features of easy
+
+07:38.390 --> 07:46.820
+to and to be able to create my security group I'm going to have to I'm going to actually provide an
+
+07:46.880 --> 07:48.380
+easy to class.
+
+07:48.560 --> 07:50.690
+All right it's easy to.
+
+07:50.690 --> 07:59.300
+Class is going to be base for my easy to action so I can simply separate my concerns about my implementation.
+
+07:59.350 --> 08:10.400
+All right within that class of course I'm going to start off with naming my class as easy to write within
+
+08:10.400 --> 08:12.130
+the class.
+
+08:12.140 --> 08:18.310
+The first thing that I'm going to do is I'm going to provide my initialiser method.
+
+08:18.770 --> 08:27.680
+So within this initialiser method I'm going to pass in the client and then after that I'm going to say
+
+08:28.370 --> 08:33.500
+self dot underscore client is equals to the client.
+
+08:33.830 --> 08:41.160
+And for my autocomplete capabilities I'm going to provide my PI both.
+
+08:41.630 --> 08:52.080
+So I'm going to say type is Pi both are three that easy to just like that.
+
+08:52.160 --> 09:00.140
+So let's go down here and let's just say create security group.
+
+09:00.920 --> 09:01.960
+All right.
+
+09:03.220 --> 09:16.960
+And within that method I'm going to just first say I'm creating our Yes security group with some name
+
+09:17.320 --> 09:20.870
+and I can just simply pass in a constant.
+
+09:20.920 --> 09:27.750
+Or I can just do anything I want but in my case I'm going to give it an actual name.
+
+09:27.750 --> 09:34.240
+So yes security group.
+
+09:35.680 --> 09:38.780
+And of course name.
+
+09:39.040 --> 09:49.180
+So this is going to be my my RLDS public security group.
+
+09:49.180 --> 09:50.410
+All right.
+
+09:50.650 --> 09:57.160
+So let's just go down here and put it to my print statement.
+
+09:57.160 --> 09:57.790
+All right.
+
+09:57.910 --> 10:06.250
+So we can now create our security group to access our D.S. instance so I'm going to say self-taught
+
+10:06.250 --> 10:16.150
+client dot create as you can see it is already completing security group and for the security group
+
+10:16.150 --> 10:21.580
+of course we're not doing a dry run which is just simply validating your API calls.
+
+10:21.640 --> 10:28.090
+And we're going to have to provide a group name and forwarding group name.
+
+10:28.090 --> 10:35.980
+I'm going to simply provide the constant that I just typed in RDF security group name or my RLDS public
+
+10:35.980 --> 10:43.460
+security group and for the description I'm going to say RLDS.
+
+10:44.090 --> 10:44.940
+Oops.
+
+10:45.160 --> 10:51.130
+RDX security group for public access.
+
+10:51.130 --> 10:52.990
+All right.
+
+10:52.990 --> 10:56.590
+And for the VPC I.D. of course.
+
+10:56.620 --> 10:59.880
+I want to place this in within a VPC.
+
+11:00.160 --> 11:07.810
+I'm going to have to go to my AWOS console and get the VPC ID of my default PC.
+
+11:08.020 --> 11:16.150
+And if you want to get the VPC I.D. of course you can just simply get a client as easy too and you can
+
+11:16.150 --> 11:20.580
+just get TV PC I.D. but we don't want to lose time doing that.
+
+11:20.590 --> 11:24.800
+And of course you can definitely do that when you have time to do it.
+
+11:24.910 --> 11:32.790
+And let's go to our AWOS concert right now and let's go to the PC section.
+
+11:33.070 --> 11:38.290
+Let's just type in the PC and within that PC section
+
+11:41.710 --> 11:46.790
+and of course we were in the Paris region or U.S.-Korea region.
+
+11:46.900 --> 11:52.320
+So let's just go there so that we don't get the wrong ID.
+
+11:52.540 --> 11:53.780
+And here we go.
+
+11:54.130 --> 11:58.560
+This is our PCI I.D. and I'm just going to copy that.
+
+11:59.110 --> 12:02.470
+And I'm just going to paste it in right here.
+
+12:02.470 --> 12:03.830
+Here we go.
+
+12:04.120 --> 12:08.980
+Our PC I.D. and our security group creation method is ready.
+
+12:09.070 --> 12:15.070
+But before we can make use of the security group we're going to have to add some inbound crude to this
+
+12:15.070 --> 12:16.610
+security group.
+
+12:16.690 --> 12:30.910
+So I'm going to say at in-bound rule to security group or as G and for the security group for this rule
+
+12:30.910 --> 12:37.240
+adding section for this method I'm going to have to make use of my security group.
+
+12:37.240 --> 12:48.670
+So let's just first say adding inbound access through to security.
+
+12:49.720 --> 12:56.290
+So as you can see we're going to have to need the security group name or ID in some cases so that we
+
+12:56.290 --> 12:57.430
+can make use of it.
+
+12:57.460 --> 13:08.590
+So I'm going to pass in a security group I.D. up top of my method within the parameters so I can both
+
+13:08.590 --> 13:12.810
+print it out and I can make it use of within my methods.
+
+13:12.940 --> 13:15.450
+So security group ID.
+
+13:15.490 --> 13:24.340
+And then I can simply call my client method for adding Rule 2 to my security group but the name of that
+
+13:24.340 --> 13:26.040
+method is a little bit different.
+
+13:26.050 --> 13:32.850
+So it is simply authorize Security Group ingress ingress.
+
+13:32.950 --> 13:40.510
+As you can see and as you're aware of and I believe you're aware of is the inbound secure Dural creation
+
+13:40.570 --> 13:45.160
+and egress is simply the outgoing connection definitions.
+
+13:45.160 --> 13:51.910
+So in our case we're going to need the ingress and within the ingress as you can see we're going to
+
+13:51.910 --> 13:56.940
+have to either provide the group name or the group ID.
+
+13:57.010 --> 14:04.750
+But since I chose to provide the group id I'm going to pro-white Security Group ID that I'm just going
+
+14:04.750 --> 14:05.710
+to create.
+
+14:05.710 --> 14:14.400
+So let's just say security group ID and of course I'm going to provide the IP permissions.
+
+14:14.650 --> 14:23.590
+So within the IP permissions I'm going to give a list of IPs that I want to pass in that I want to allow
+
+14:23.620 --> 14:26.510
+to my Ardis instance access.
+
+14:26.800 --> 14:36.580
+So within that IP address list I'm going to provide my first element within that list and I'm going
+
+14:36.580 --> 14:49.000
+to say IP protocol and this protocol is going to be TCAP so that I can allow any connection to IDB within
+
+14:49.000 --> 14:50.840
+that IP block.
+
+14:50.980 --> 15:02.620
+So I'm going to say from Port and I'm going to allow access to my RLDS instance only from the 54 32
+
+15:02.890 --> 15:06.060
+which is the default port for pulse Gracy call.
+
+15:06.220 --> 15:17.610
+And I'm going to allow this to be connected to my 54 and 32 so I'm going to again say 54 32.
+
+15:17.710 --> 15:28.680
+And lastly I'm going to provide the IP ranges for my s instance to my connection so far the IP ranges.
+
+15:28.690 --> 15:37.000
+I can definitely provide lots of IPs for the IP ranges but in my case I'm just going to provide a single
+
+15:37.000 --> 15:38.180
+element to this list.
+
+15:38.230 --> 15:45.760
+So I'm going to say cyder IP and this is going to be
+
+15:48.550 --> 15:49.210
+0
+
+15:51.730 --> 15:57.240
+0 0 0 and then Sless 0.
+
+15:57.250 --> 16:00.160
+So I believe you know what this means.
+
+16:00.160 --> 16:06.480
+This means that we're simply allowing anyone to connect to our RLDS instance.
+
+16:06.490 --> 16:13.450
+So in your case if you want to don't do that and you probably don't want to do that you can just limit
+
+16:13.480 --> 16:20.960
+the security group rules to your specific IP blocks or maybe just the IP of your own computer.
+
+16:21.220 --> 16:28.000
+So you can go check out what is the IP of your internet connection and then you can simply type it in
+
+16:28.000 --> 16:33.010
+right here to limit the connection availability to your RDX instance.
+
+16:33.250 --> 16:34.560
+All right.
+
+16:34.900 --> 16:39.550
+So this is simply everything that we're going to do within the C section.
+
+16:39.700 --> 16:46.590
+So now we can go back to our RLDS implementation and see what else we're going to need.
+
+16:46.600 --> 16:54.340
+The first thing that we're going to need is of course implement the RDX client for our D s creation.
+
+16:54.460 --> 16:59.930
+So for that purpose let's go and get DC to client.
+
+17:00.040 --> 17:08.620
+And with that easy to quiet let's just add our security group and pass in the security group ID to our
+
+17:08.830 --> 17:13.530
+inbound group class to add rule to our security group.
+
+17:14.020 --> 17:22.320
+So let's go out here and first import the easy to class from S R C.
+
+17:22.460 --> 17:24.380
+Easy to an import.
+
+17:24.400 --> 17:28.830
+Easy to just like that and blow there.
+
+17:28.930 --> 17:40.990
+Let's first get DC to client and after that get DC to itself as easy to and passing in easy to client.
+
+17:40.990 --> 17:42.140
+All right.
+
+17:42.490 --> 17:46.990
+So the first thing that we're going to do is to create a security group.
+
+17:47.050 --> 17:55.720
+So I'm just going to simply comment out here to say I'm creating a security group and the security group
+
+17:55.720 --> 18:06.430
+response is security group and then I'm going to say easy to dot create security group just like that.
+
+18:06.460 --> 18:13.110
+So the next thing that I'm going to need is the idea of the security group.
+
+18:13.150 --> 18:16.790
+So get idea of the security group.
+
+18:16.990 --> 18:28.440
+So to do that I'm going to say security group I.D. equals security group and the security group I.D.
+
+18:28.450 --> 18:36.970
+is coming from the security group as group I.D. and to verify that we can simply go back to our both
+
+18:36.970 --> 18:47.680
+or three API and from there if we go to easy to section and if we locate the method for creating security
+
+18:47.680 --> 18:51.340
+groups and here we go.
+
+18:51.700 --> 19:01.030
+Oops sorry about that let's just say create a security group and this is it.
+
+19:01.030 --> 19:08.230
+So if we check out the return parameters of this method you can see that it all returns the group id
+
+19:08.470 --> 19:10.450
+of the security group.
+
+19:10.450 --> 19:11.480
+All right.
+
+19:11.590 --> 19:16.960
+So I can just go back and make use of this security group idea right now.
+
+19:17.020 --> 19:27.610
+So the next thing that I'm going to do is I'm going to just print out that created RLDS security group
+
+19:29.860 --> 19:35.600
+with ID and this ID of course security group ID.
+
+19:35.620 --> 19:44.810
+And the next thing I'm going to do is I'm going to add the public access through to my security group.
+
+19:45.010 --> 19:51.880
+So I'm going to call in easy to dot add inbound router security group.
+
+19:52.090 --> 19:55.140
+So I'm going to say security group Heidi.
+
+19:55.180 --> 19:57.200
+And I'm just simply done.
+
+19:57.670 --> 20:11.590
+And let's also say and printout added inbound public access through to security group.
+
+20:11.680 --> 20:16.410
+So with I.D. of course let's just be declarative about what we're doing.
+
+20:16.510 --> 20:17.810
+And here we go.
+
+20:18.130 --> 20:25.770
+So I can just simply turn the security group ID so that we can make use of it within the RTX instance
+
+20:25.780 --> 20:27.250
+launching Methot.
+
+20:27.250 --> 20:28.500
+All right.
+
+20:28.940 --> 20:37.210
+So the next thing that we're going to do is we're going to have to create a D-B subnet group as we checked
+
+20:37.210 --> 20:42.630
+out the bowlful three API documentation before launching our RLDS instance.
+
+20:42.940 --> 20:50.880
+So let's just go down here and let's just lounge let's just create a database subnet group.
+
+20:50.980 --> 20:59.740
+So I'm going to call this method as D-B subnet group and within that method first thing I'm going to
+
+20:59.740 --> 21:04.320
+do is of course creating Ardie Yes.
+
+21:04.340 --> 21:08.800
+DB The soft knit group.
+
+21:09.400 --> 21:16.990
+And of course the subnet group is going to need a name and I'm going to give it a name right up top
+
+21:18.700 --> 21:20.200
+like this.
+
+21:23.270 --> 21:29.160
+RLDS the subnet name.
+
+21:30.440 --> 21:41.600
+And this is going to be like RLDS or my r d s subnet group.
+
+21:41.900 --> 21:42.600
+All right.
+
+21:42.680 --> 21:47.210
+So I can just go down here and pass it in
+
+21:50.380 --> 21:53.290
+our Yes the subnet name.
+
+21:53.300 --> 21:54.210
+All right.
+
+21:54.590 --> 22:00.930
+And after that I can just simply call the method to create my D-B subnet group.
+
+22:01.010 --> 22:06.750
+So create D-B subnet group.
+
+22:06.860 --> 22:12.560
+So within that method I'm going to have to pass in a D-B subnet group name.
+
+22:12.800 --> 22:16.340
+And of course that is the name that I just created.
+
+22:16.370 --> 22:24.420
+The constant that I typed in and I can optionally provide a description for my D-B subnet.
+
+22:25.220 --> 22:38.660
+So I'm going to say my own subnet group for our DSD B and the last thing that I'm going to do is I'm
+
+22:38.660 --> 22:46.060
+going to pro-white the subnet IDs that I want to spend this TB within my subnet walk.
+
+22:46.100 --> 22:55.850
+So for those subnet IDs as you can remember from our VPC part I'm going to take those from my AWOS console
+
+22:56.030 --> 23:01.120
+with the default PC and default subnets from that PC.
+
+23:01.160 --> 23:09.560
+So let's go to a AWOS console right now and get the subnet IDs.
+
+23:09.620 --> 23:12.410
+So this is our first stop at
+
+23:15.030 --> 23:21.200
+and I'm going to get the other subnet as well.
+
+23:25.400 --> 23:28.610
+And I'm going to get the last one
+
+23:31.630 --> 23:32.560
+and here we go.

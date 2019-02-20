@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00.930 --> 00:08.800
+Before we wrap things up with Dynamo D-B Let's take a look at what we have done in this section in this
+
+00:08.800 --> 00:10.170
+section.
+
+00:10.390 --> 00:18.610
+We first set up our project in pide charm ID so that we could use dynamo D with Python and both of three.
+
+00:18.700 --> 00:26.560
+We created our Kaline factory class for accessing dynamo D-B client easily so that we couldn't we don't
+
+00:26.560 --> 00:34.300
+have to provide both all three client declaration every time that we want to access dynamic D-B so that
+
+00:34.300 --> 00:39.430
+we could wrap our dynamic D-B client very easily and very beautifully.
+
+00:40.060 --> 00:45.850
+And after setting up our project into dynamo DB with PIJ are mighty.
+
+00:46.000 --> 00:54.850
+We started our implementations with creating tables on dynamic EDV and after we finish creating our
+
+00:55.090 --> 01:02.330
+first table on dynamo D we could describe our table on dynamo D-B by providing its name.
+
+01:02.590 --> 01:11.050
+And after that we upgraded our table with the provision throughput elements or read and write capacity
+
+01:11.050 --> 01:13.330
+of our dynamic db table.
+
+01:13.330 --> 01:18.130
+At first we initially provided 5 4 Read and 5 4 right.
+
+01:18.220 --> 01:25.570
+But after that we wanted to update our table and we updated our table with the right four five five
+
+01:25.570 --> 01:30.120
+to 10 and four read from five to 10 again.
+
+01:30.970 --> 01:37.030
+And finally we delete it and we learned how to delete our dynamo DV table.
+
+01:37.030 --> 01:43.540
+And we learned how easy it is to delete a dynamic D-B just by providing the table name.

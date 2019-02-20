@@ -1,0 +1,88 @@
+WEBVTT
+
+00:02.060 --> 00:08.350
+So let's assume that we're done with our audiences and we just simply want to delete it.
+
+00:08.510 --> 00:13.570
+How we do that the way to do that is quite simple actually.
+
+00:13.580 --> 00:22.580
+So now let's go to our RLDS class and within our audience class after our restore method let's just
+
+00:22.580 --> 00:25.610
+say to eat.
+
+00:26.180 --> 00:35.650
+And from there of course we're going to have to provide an identifier to this method as we all the methods
+
+00:35.690 --> 00:39.820
+all the other methods of AWOS are the client.
+
+00:40.430 --> 00:53.750
+And let's just print out that deleting RLDS instance with name and B identifier and let's just return
+
+00:54.270 --> 01:01.550
+self-taught client dot delete D-B instance.
+
+01:02.090 --> 01:13.420
+And if I hit Enter I'm going to pass in the DB instance identifier as this and there is a flag from
+
+01:13.450 --> 01:17.520
+A W-S as Skip final snapshot.
+
+01:17.560 --> 01:26.020
+So what this means is that when we try to delete a RLDS instance on a US AWOS automatically takes a
+
+01:26.020 --> 01:29.220
+snapshot of that D-B before deleting it.
+
+01:29.230 --> 01:37.390
+So if we pass in true within this method AWOS won't be able to take a backup take a snapshot before
+
+01:37.390 --> 01:41.830
+we delete this instance so it's going to simply delete this Aston's right away.
+
+01:41.980 --> 01:50.200
+But if you set this flag to false and you're going to have to provide a final D-B snapshot identifier
+
+01:50.200 --> 01:52.560
+to be created on AWOS.
+
+01:52.720 --> 01:57.920
+So I'm going to simply say skip file snapshot as true.
+
+01:58.240 --> 01:59.600
+And here we go.
+
+02:00.190 --> 02:09.230
+Let's just go to our deployment class and let's just define a method and delete the B.
+
+02:09.260 --> 02:13.540
+Let's get our Yes and Flete database.
+
+02:13.630 --> 02:22.360
+So to delete that database I'm going to use since we have launched a database from our previous snapshot
+
+02:22.660 --> 02:25.570
+I can simply call it for this database.
+
+02:25.750 --> 02:28.810
+And here we go.
+
+02:28.870 --> 02:38.310
+So if I go down and call this method just like this let's see what's going to happen.
+
+02:40.800 --> 02:42.360
+Here we go.
+
+02:42.690 --> 02:48.360
+Our Arrius sensors must be deleted on a WS.
+
+02:48.440 --> 02:57.040
+And as you can see this being deleted right now and if we also want to delete the pulse post be we can
+
+02:57.040 --> 03:01.730
+just simply provide the identifier here and we can just delete it.
+
+03:01.900 --> 03:02.690
+Just like that.

@@ -1,0 +1,37 @@
+WEBVTT
+
+00:01.220 --> 00:06.400
+So now let's take a look at the table dynamo D-B table that we just created.
+
+00:06.620 --> 00:13.220
+And since I opened up my browser previously I can't see my table right here so I'm going to hit refresh
+
+00:13.220 --> 00:14.030
+right now.
+
+00:16.400 --> 00:17.810
+And here we go.
+
+00:18.020 --> 00:22.040
+Our dynamo TB table is present right here.
+
+00:22.040 --> 00:30.260
+And if I go one hit on the name of the table I can see everything about my table with its default properties
+
+00:30.400 --> 00:34.130
+to the properties that I sent in to my table.
+
+00:34.130 --> 00:43.110
+And as you can see the capacity for this table is estimated for like dollars and 45 cents per month.
+
+00:43.340 --> 00:50.270
+And if I had indexes I could see them here and I can simply see everything about my dynamic the table
+
+00:50.270 --> 00:51.520
+right here.
+
+00:51.860 --> 00:55.470
+So we could successfully create our dynamo D-B.
+
+00:55.490 --> 01:01.300
+So let's move on with our implementation and see what else we can do with Dynamo or D-B.

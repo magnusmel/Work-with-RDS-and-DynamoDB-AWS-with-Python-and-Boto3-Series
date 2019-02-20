@@ -1,0 +1,76 @@
+WEBVTT
+
+00:01.360 --> 00:08.840
+So I logged into my AWOS console and you can see that my console is ready to Manoo play it.
+
+00:08.860 --> 00:13.730
+So the first thing that we're going to do is of course check out the art.
+
+00:13.770 --> 00:14.550
+Yes.
+
+00:14.560 --> 00:23.380
+So to do that you can either go to services and type in already yes or you can go back and just from
+
+00:23.380 --> 00:29.260
+the dashboard you can just say yes it's just simply the same thing.
+
+00:29.260 --> 00:36.600
+And I'm going to hit click and Dan RDR Service is now initialising for me.
+
+00:37.130 --> 00:39.780
+And here we go.
+
+00:39.800 --> 00:46.340
+So as you can see now I don't have any RLDS instances or any other resources related to our.
+
+00:46.370 --> 00:46.940
+Yes.
+
+00:46.970 --> 00:50.320
+So it is saying me that I can get started now.
+
+00:50.540 --> 00:57.560
+So what we're going to do in this section is we're going to launch our own our D.S. instances and as
+
+00:57.560 --> 01:00.180
+you can see I don't have any of them right now.
+
+01:00.350 --> 01:08.360
+And just like we can do from here like clicking on launch and RLDS instance and selecting the vendor
+
+01:08.360 --> 01:15.280
+or the engine of your Ardis instance we're going to do all of that from our Polytone implementation.
+
+01:15.350 --> 01:23.750
+So so as you can see it is going to be a great exercise to know how to launch RLDS instances because
+
+01:24.020 --> 01:31.820
+when you're working in a real environment or in a actual real project to use an RDX instance you're
+
+01:31.820 --> 01:36.280
+going to have to probably do that with the help of the API.
+
+01:36.530 --> 01:45.060
+Iturbi and other kind of API like a WSC all by itself or and with the most preferred way as the python.
+
+01:45.330 --> 01:47.920
+You're going to have to know how to do that.
+
+01:47.930 --> 01:55.020
+So this is going to be a great exercise says because we're going to not just only lounge are our D.S.
+
+01:55.050 --> 02:00.950
+instance we're going to learn how to take the backup or snapshot in the term of art.
+
+02:00.950 --> 02:01.560
+Yes.
+
+02:01.760 --> 02:07.430
+And then we're going to learn how to restore that DB from that snapshot.
+
+02:07.430 --> 02:08.170
+All right.
+
+02:08.240 --> 02:15.720
+So let's go to our next video and start implementing our RLDS instance implementation.

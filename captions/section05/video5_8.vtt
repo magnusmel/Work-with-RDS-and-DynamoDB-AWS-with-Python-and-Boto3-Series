@@ -1,0 +1,64 @@
+WEBVTT
+
+00:02.920 --> 00:06.000
+So we're on our AWOS console.
+
+00:06.060 --> 00:14.100
+And and if you remember from our last time we deleted our security group that we could created accidentally.
+
+00:14.230 --> 00:26.170
+And if I hit refresh and as you can see our RDF public security group is created with the proper naming
+
+00:26.170 --> 00:32.620
+and description and if you check out the inbound rules we can see that we're allowing connections from
+
+00:32.620 --> 00:35.320
+port five four three two.
+
+00:35.440 --> 00:43.600
+And with any source from anywhere to be connected to our RDX instance so we're good with the security
+
+00:43.600 --> 00:44.360
+groups.
+
+00:44.560 --> 00:53.170
+So if we go and check out the audience itself we're going to see that we how are our TS instance there
+
+00:53.230 --> 00:54.790
+and here we go.
+
+00:55.210 --> 00:59.630
+So are the instances already initialized then lunch.
+
+00:59.680 --> 01:07.780
+And it is in the state of backing up by AWOS and automatically this process is completely automatically
+
+01:07.780 --> 01:12.790
+done by AWOS itself for any disaster recovery.
+
+01:12.790 --> 01:19.810
+And if we go and check the subnet groups for our security group and as you can see it's just there.
+
+01:20.170 --> 01:25.460
+So our D-B is now being spent two different subnets.
+
+01:25.510 --> 01:33.250
+And if you want to enable the Malte a Z or Malte availability zone the subnets are going to be used
+
+01:33.250 --> 01:37.590
+to spend our D-B instances within those subnets.
+
+01:37.600 --> 01:41.490
+So as you can see our D-B is almost ready to use.
+
+01:41.500 --> 01:48.880
+But if you want to interact with our D-B instance we have to see the status as a vailable right here
+
+01:49.090 --> 01:53.560
+so that we can connect to and manipulate our data with them.
+
+01:53.600 --> 01:55.470
+Our DSD be for instance.
+
+01:55.480 --> 01:56.020
+All right.

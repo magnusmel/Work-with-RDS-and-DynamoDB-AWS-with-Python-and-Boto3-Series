@@ -1,0 +1,97 @@
+WEBVTT
+
+00:02.340 --> 00:10.290
+Before we jump into our implementation Let's go and take healthy both of 3 RLDS documentation and see
+
+00:10.290 --> 00:11.940
+what we can get from there.
+
+00:12.030 --> 00:21.120
+So in a search engine with your perforation I think it is Google but let's just type in both L3 and
+
+00:21.330 --> 00:23.580
+our Yes.
+
+00:23.690 --> 00:31.630
+And as you can see we have the Ardelia's documentation on top of the result list so let's click on it.
+
+00:33.430 --> 00:38.860
+And as you can see we have the RLDS client for both all three.
+
+00:39.190 --> 00:49.210
+And you can see that we have a huge list of methods for RLDS from taking a backup to creating D-B clusters
+
+00:49.240 --> 00:56.840
+and everything else about RLDS is ready to be implemented with Python and both all three.
+
+00:56.860 --> 01:07.240
+And if we go down and check out a simple method let's just say describe D-B instance which is the actual
+
+01:07.240 --> 01:10.310
+method that we're going to implement in the later sections.
+
+01:10.540 --> 01:18.280
+As you can see it says it returns information about provisioned RLDS instances and as you can see this
+
+01:18.310 --> 01:20.500
+API supports pagination.
+
+01:20.500 --> 01:29.740
+So you can return large amounts of RLDS instance list and you can paginate within those instances.
+
+01:29.740 --> 01:37.450
+And as you can see it is expecting a D-B instance identifier and an optional argument as filters and
+
+01:37.450 --> 01:38.330
+so on.
+
+01:38.680 --> 01:46.300
+So the nice thing about this bowlful 3 documentation it is a huge amount of documentation that you can
+
+01:46.300 --> 01:54.190
+find for a client like this because both the three is highly supported from A W-S.
+
+01:54.210 --> 02:00.510
+And recently actually AWOS itself is implementing both three API.
+
+02:00.730 --> 02:09.250
+So if there is any other news service from a US not dislike RLDS completely new service from us and
+
+02:09.490 --> 02:11.420
+you can get the API for that.
+
+02:11.470 --> 02:18.130
+Andi just simply the later day it's just a great way to implement a deal us.
+
+02:18.340 --> 02:21.700
+The bowlful three way is the best way actually.
+
+02:21.700 --> 02:30.550
+So as you can see this API is huge and you can see the response syntax and you can just write your code
+
+02:30.580 --> 02:38.530
+write your API against this API and you can have a solid foundation for the AWOS implementation.
+
+02:39.760 --> 02:42.590
+So this is basically all we have to know about.
+
+02:42.730 --> 02:49.830
+Both all three documentation and I'm going to definitely go and put the link on to my description.
+
+02:49.900 --> 02:52.670
+And as you can see it's just simply both.
+
+02:52.720 --> 02:55.280
+3. we did Dogstar IO.
+
+02:55.360 --> 03:03.310
+And if you can check out the other implementations you're going to see that this is just simply a beautiful
+
+03:03.310 --> 03:08.640
+documentation from both of three guys.
+
+03:08.680 --> 03:11.040
+So in the next videos.
+
+03:11.290 --> 03:17.100
+Let's just jump right into our implementation and see what we can do with RLDS.

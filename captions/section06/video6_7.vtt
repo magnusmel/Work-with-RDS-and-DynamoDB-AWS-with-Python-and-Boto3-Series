@@ -1,0 +1,103 @@
+WEBVTT
+
+00:02.400 --> 00:05.940
+So we know how to create a dynamo D-B table.
+
+00:06.180 --> 00:11.760
+But how about describing an existing table or the table that we just created.
+
+00:11.760 --> 00:21.180
+In this case so to learn about describing the table let's go to our dining Modibo class and from there
+
+00:21.900 --> 00:28.950
+I'm going to add a new method described table and two describing a table.
+
+00:28.950 --> 00:33.870
+Of course you're going to need a table name and that's good for the stores.
+
+00:33.960 --> 00:48.150
+Let's also say describing Dynamo the table with name and then table.
+
+00:48.250 --> 00:55.290
+So let's just return self-taught client and describe a table.
+
+00:55.300 --> 01:01.420
+This is the method that we're looking for and the only parameter that this method is looking for as
+
+01:01.720 --> 01:03.120
+is the table name.
+
+01:03.250 --> 01:09.070
+We don't have to provide anything else to describe a table.
+
+01:09.070 --> 01:18.880
+So let's go back to our managed dynamic D-B class and from there let's just add another method for describing
+
+01:18.880 --> 01:20.440
+the table.
+
+01:20.590 --> 01:34.190
+So let's say describe table and within that method let's just also provide a new simple method to get
+
+01:34.200 --> 01:40.630
+a client for us so that we don't have to call the client every time we have to pass in.
+
+01:41.040 --> 01:50.850
+So get dynamo D.B and then what I'm going to do is I'm going to paste this code right here and then
+
+01:51.120 --> 01:58.840
+I'm going to call this method and I'm going to say get dynamo D-B.
+
+01:59.280 --> 02:07.910
+Of course I have to return dynamo D-B Colline from that class so that I can use it dynamically.
+
+02:07.920 --> 02:15.980
+And then what I'm going to do now is and I'm going to put dot and then the autocomplete is already working.
+
+02:16.110 --> 02:18.920
+And I can call my describe table method.
+
+02:19.140 --> 02:25.410
+So within that method I can pass in the table name just like I have here.
+
+02:25.920 --> 02:33.680
+So I can just pass in movies for my description purposes and here we go.
+
+02:33.720 --> 02:40.220
+So let's try out for describing the dynamo table.
+
+02:40.590 --> 02:44.250
+So let's just run it and see what we're going to see.
+
+02:44.400 --> 02:51.950
+And also Lissa's printout result from our dynamo DP description call.
+
+02:52.470 --> 02:57.140
+So what I'm going to do now I'm going to wrap this around with a print statement.
+
+02:57.390 --> 03:04.470
+And also since this is going to be a dictionary I'm going to wrap it around with a string definition
+
+03:04.470 --> 03:05.330
+too.
+
+03:05.340 --> 03:06.510
+All right.
+
+03:06.870 --> 03:10.410
+So I'm going to hit run and see what's going to happen.
+
+03:12.000 --> 03:13.380
+And here we go.
+
+03:13.740 --> 03:20.970
+Our table is described with all of its properties as you can see from the Keys Kema attribute definitions
+
+03:21.230 --> 03:26.370
+to date time that is created and the time that is last updated.
+
+03:26.370 --> 03:35.700
+And I can see the provision throughput and read capacity write capacity table or n table ID and simply
+
+03:35.700 --> 03:39.120
+everything about my dynamo D-B table today I need.

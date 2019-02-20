@@ -1,0 +1,424 @@
+WEBVTT
+
+00:04.470 --> 00:10.940
+So let's start by creating our real first table on dynamo ETP and to do that.
+
+00:11.100 --> 00:19.590
+I'm going to have my own class for manipulating dynamo D-B so that we can make use of our dynamo D-B
+
+00:19.590 --> 00:20.180
+client.
+
+00:20.220 --> 00:28.990
+So I'm going to name this class simply as dynamo de And I'm going to first start by declaring my class
+
+00:29.080 --> 00:33.640
+as dynamo ATP.
+
+00:33.820 --> 00:34.960
+All right.
+
+00:35.110 --> 00:42.010
+And after that I'm going to have of course my initialiser method so that I can pass in my client so
+
+00:42.010 --> 00:44.520
+I can work with my nemo t.p.
+
+00:44.680 --> 00:53.320
+And within this initialiser mentored of course I'm going to do this self-taught underscore client equals
+
+00:53.430 --> 01:00.820
+the client that I'm passing in which is going to be of course dynamo DP and also one of the most important
+
+01:00.820 --> 01:05.680
+parts of our lectures is Pi both are three which is autocomplete.
+
+01:05.800 --> 01:12.940
+So for auto complete I'm going to put in my both or three type declaration so I can use the benefits
+
+01:13.000 --> 01:23.640
+of autocomplete features of Pi both of three cell type and then pi both all three dot dynamo DBI.
+
+01:24.600 --> 01:25.290
+All right.
+
+01:26.720 --> 01:30.450
+So I can now create my table.
+
+01:30.630 --> 01:37.080
+Let's just type in a method for creating a table and we can then check out what we're going to need
+
+01:37.080 --> 01:40.000
+to create a table.
+
+01:40.020 --> 01:50.010
+So first just add a print statement saying that we're creating dynamo db table
+
+01:52.620 --> 02:02.330
+and then let's take out the API documentation return self-taught client datt create table.
+
+02:02.340 --> 02:05.200
+So this is the method that we're going to need.
+
+02:05.250 --> 02:11.490
+And as you can see there is the like whose list of the arguments for this method that we have to provide
+
+02:11.520 --> 02:14.140
+but not all of them are required.
+
+02:14.390 --> 02:17.890
+So to check out what is required and what is not.
+
+02:18.180 --> 02:21.640
+Let's go back to our both of three API documentation.
+
+02:22.810 --> 02:29.850
+And from there as you can see we have a nice list of arguments and properties for this method.
+
+02:30.160 --> 02:36.380
+This is the create table documentation but to check out what is required and what is not.
+
+02:36.400 --> 02:39.880
+And as you can see the attribute definition's is required.
+
+02:40.180 --> 02:45.910
+And if you're providing an attribute definition then you're going to have to provide the attribute name
+
+02:45.910 --> 02:47.550
+and attribute type to.
+
+02:47.860 --> 02:54.280
+And of course you're going to have to provide a table name for your dynamic db table and definitely
+
+02:54.280 --> 03:00.220
+going to have to provide a key schema for your database for your table actually.
+
+03:00.220 --> 03:10.360
+And the other parts of this is our attribute name key type for of course the key schema and then the
+
+03:10.540 --> 03:19.330
+rest of the index is local secondary index and global indexes are like basically the optional properties
+
+03:19.420 --> 03:21.470
+for a dynamo db table.
+
+03:21.700 --> 03:25.510
+As you can see here it doesn't say anything about required.
+
+03:25.570 --> 03:31.120
+These are of course important parts of Dynamo DB But since we're not going to use them in this lecture
+
+03:31.450 --> 03:32.870
+we don't have to define them.
+
+03:32.890 --> 03:40.200
+So we're going to stick with the required properties and the very base schema of creating a dynamic
+
+03:40.210 --> 03:42.060
+db table.
+
+03:42.070 --> 03:47.990
+So now let's go back to our implementation and within our implementation.
+
+03:48.100 --> 03:52.550
+Let's just first say our table name and for our properties.
+
+03:52.600 --> 03:59.940
+I'm going to pass in everything from my method signature and let's say table.
+
+04:00.470 --> 04:09.590
+And what I'm going to do is I'm going to set my table name to this table and then I'm going to provide
+
+04:09.590 --> 04:20.120
+my attribute definitions which was a dictionary and I'm going to say attribute definitions and I'm going
+
+04:20.120 --> 04:21.340
+to pass this in.
+
+04:21.560 --> 04:32.220
+And after that I'm going to provide my key schema So let's say key schema and this also passes in to
+
+04:32.400 --> 04:38.730
+the method and then I'm going to pro-white the provision throughput.
+
+04:38.740 --> 04:39.480
+All right.
+
+04:39.540 --> 04:44.030
+So let's also say IOPS.
+
+04:44.070 --> 04:45.960
+So this is basically the same thing.
+
+04:46.140 --> 04:54.690
+Let's just pass it in and here we go our basic table creation method is ready but how we're going to
+
+04:54.690 --> 04:56.660
+pass these arguments in.
+
+04:56.970 --> 05:05.910
+So to do that we're going to have to create a little class to actually test our implementation against
+
+05:05.910 --> 05:07.250
+Dynamo OTB.
+
+05:07.260 --> 05:15.910
+So what I'm going to do now is I'm going to create a helper class as managed dynamic.
+
+05:15.920 --> 05:22.470
+DP So this is just basically for our separation of concerns about our implementation.
+
+05:22.980 --> 05:30.660
+So I'm going to create manage dynamo D-B class and within this class what I'm going to do for us is
+
+05:31.230 --> 05:39.840
+I'm going to import my dynamo Modibo client so I'm going to say as R C Klein factory and Dynamo D-B
+
+05:39.960 --> 05:49.080
+client and also I'm going to get my implementation of Dynamo D-B from SIRC dynamo DP and again dynamo
+
+05:49.080 --> 05:49.610
+DP.
+
+05:49.680 --> 05:50.900
+All right.
+
+05:51.390 --> 05:55.390
+So I'm going to add a simple method.
+
+05:55.420 --> 06:04.830
+As for creating a table create dynamic db table just like that.
+
+06:06.180 --> 06:13.500
+So what this method is going to do is it is first going to get the dynamo D-B client and then I'm going
+
+06:13.500 --> 06:18.950
+to create my table with the arguments that I'm going to pass in.
+
+06:18.960 --> 06:25.830
+So let's just say dynamically be Klein so that we can retrieve declined that we just implemented behind
+
+06:25.830 --> 06:26.950
+the scenes.
+
+06:27.510 --> 06:35.850
+And I'm going to get declined and then I'm going to get the actual implementation of dynamic D-B saying
+
+06:36.120 --> 06:41.280
+dynamic ADP and then passing in the dynamo D-B client.
+
+06:41.280 --> 06:42.330
+All right.
+
+06:42.690 --> 06:50.000
+So one of the first thing that I have to do is provide a name for my table so I'm going to say table
+
+06:50.000 --> 06:57.600
+way and I'm going to create a movie database movies table actually on dynamo DP.
+
+06:57.720 --> 07:02.210
+So let's just give the table name as table name.
+
+07:02.340 --> 07:04.630
+And we're going to make use of it very soon.
+
+07:04.860 --> 07:08.560
+And what I'm going to do now I'm going to define my attributes.
+
+07:08.580 --> 07:20.820
+So define attributes as the comment here and then I'm going to provide my dictionary attribute definitions.
+
+07:20.820 --> 07:21.860
+All right.
+
+07:22.170 --> 07:30.200
+So I'm going to create a dictionary and this is going to be actually an array of dictionary elements.
+
+07:30.210 --> 07:39.030
+So I first have to create my array and within that array I'm going to create my dictionary and within
+
+07:39.030 --> 07:45.560
+this dictionary I'm going to be providing my attributes as attribute name an attribute type definition
+
+07:45.570 --> 07:46.120
+way.
+
+07:46.140 --> 07:49.060
+So this is what is required for dynamic ATP.
+
+07:49.200 --> 08:00.230
+So what I'm going to do now is attribute name whoops and this attribute is going to be year.
+
+08:00.270 --> 08:10.890
+So the release date for the movie of course and and I'm going to then provide my attribute type as a
+
+08:11.040 --> 08:11.640
+number.
+
+08:11.640 --> 08:14.430
+So the system is going to be a year and a number.
+
+08:14.440 --> 08:21.900
+This is going to be a type of number to indicate that I'm using and the dynamo DB type definition.
+
+08:21.960 --> 08:22.820
+All right.
+
+08:22.920 --> 08:28.100
+And the other attribute that I'm going to use is the title of the movie.
+
+08:28.260 --> 08:33.150
+So for the title of course I'm going to have to use a string element.
+
+08:33.300 --> 08:41.730
+So let's just say that I'm going to need a title attribute as my door.
+
+08:41.790 --> 08:48.880
+And then I'm going to provide this type provide the attribute type as string.
+
+08:49.020 --> 08:57.630
+So the capitalized the uppercase s to indicate that to Dynamo DP.
+
+08:57.690 --> 09:04.460
+So this is everything I have to provide to Dynamo D-B to my attribute definitions.
+
+09:04.460 --> 09:12.700
+So the next thing that I'm going to do is I'm going to define my key schema so key schema definitions
+
+09:12.720 --> 09:15.870
+is going to be my comment here.
+
+09:16.680 --> 09:24.450
+And then I'm going to do is I'm going to provide an array of key schema definitions for year and title
+
+09:24.450 --> 09:27.400
+elements for my dynamic db table.
+
+09:27.570 --> 09:36.010
+So let's just say the underscore schema and then provide the array of elements to dynamic DB.
+
+09:36.450 --> 09:45.780
+So the first element of this array is going to be indicated as attribute names so I'm going to provide
+
+09:45.780 --> 09:49.160
+the schema for the year attribute first.
+
+09:49.380 --> 09:53.330
+And the key type for the year attribute.
+
+09:53.430 --> 10:00.780
+So since I'm creating the key schema I have to provide the key type so key type for the year attribute
+
+10:01.650 --> 10:11.070
+is going to be hash so that I can refer this year as my partition key and my sort key if I wanted to
+
+10:12.200 --> 10:15.630
+about in this case since I'm using the hash type.
+
+10:15.630 --> 10:18.580
+This is going to be my partition key.
+
+10:23.410 --> 10:29.400
+And the other argument that I'm going to provide is my title.
+
+10:29.410 --> 10:30.060
+All right.
+
+10:30.250 --> 10:46.230
+So attribute name is title and then the key type for this attribute the title attribute is range.
+
+10:46.490 --> 10:54.340
+So with this help of the range I'm going to be able to sort my elements within my dynamo D-B table.
+
+10:54.560 --> 10:56.520
+So this is going to be as key.
+
+10:56.540 --> 10:57.520
+All right.
+
+10:58.010 --> 11:06.890
+And the last thing before I wrap up my table creation process is the initial IOPS so do read and write
+
+11:06.890 --> 11:16.140
+capacity for my dynamo IDB table so I'm going to say initial IOPS as.
+
+11:16.400 --> 11:18.590
+So this is again another dictionary.
+
+11:18.800 --> 11:25.490
+And for the initial IOPS I'm going to provide my real capacity units
+
+11:29.400 --> 11:33.260
+as 10 for starters.
+
+11:33.480 --> 11:44.730
+And maybe I can just say five and then I'm going to provide my right capacity units again as 5.
+
+11:44.730 --> 11:46.650
+All right.
+
+11:46.650 --> 11:53.080
+So these are all the components that I need to compose a dynamo IDB table for starters.
+
+11:53.100 --> 11:58.020
+So Lister's now create our dynamo D-B table.
+
+11:58.020 --> 12:12.630
+So I'm going to take a response from my API call to a element dynamo D-B create table response and then
+
+12:12.690 --> 12:17.390
+I'm simply going to call my method for creating my table.
+
+12:17.520 --> 12:26.900
+So I'm going to pass in my table name then my attribute definitions and then my schema.
+
+12:27.300 --> 12:30.250
+And finally my initial IOPS.
+
+12:30.300 --> 12:31.760
+All right.
+
+12:31.770 --> 12:38.910
+So this is basically everything I need to create my dynamo DB And let's just finally print out the statement
+
+12:38.910 --> 12:40.600
+that created
+
+12:43.490 --> 12:52.190
+dynamo D-B table named and table name.
+
+12:52.570 --> 13:04.480
+And also let's just print out the response from dynamo DP and for that since this is going to be returning
+
+13:04.480 --> 13:10.590
+a dictionary object to me and I can simply print this out with as it is.
+
+13:10.720 --> 13:17.830
+So I have to wrap it around with a string definition so I'm going to get the dynamo D-B create table
+
+13:17.830 --> 13:21.810
+response and Derrida's.
+
+13:22.160 --> 13:29.120
+So for the last part let's just put a main method here so that we can call this method.
+
+13:29.290 --> 13:34.150
+And as you can remember it is create dynamo D-B table.
+
+13:34.480 --> 13:35.530
+And here we go.
+
+13:35.740 --> 13:43.820
+So we're ready to create our dynamo table so let's just hit Tron and see what's going to happen.
+
+13:46.070 --> 13:49.950
+Here we go our dynamo D-B table is created.
+
+13:49.970 --> 13:58.100
+And as you can see we have all the attributes everything about our dynamo D-B from its Iarbus to keys
+
+13:58.120 --> 13:59.350
+schema definitions.
+
+13:59.390 --> 14:06.830
+Attribute definitions and everything about dynamo D-B is present within this a response.

@@ -1,0 +1,85 @@
+WEBVTT
+
+00:01.670 --> 00:06.820
+So we're finished with our dynamo db table and we want to get rid of it.
+
+00:06.810 --> 00:09.560
+Are we just want to simply delete it.
+
+00:09.740 --> 00:12.860
+How we're going to do that to do that.
+
+00:12.890 --> 00:19.720
+Let's go to our dynamo D-B class and from there let's just add another method.
+
+00:20.420 --> 00:30.980
+And for the naming of that method delete table with name so that I'm going to pass in the table name
+
+00:31.280 --> 00:37.190
+that I'm going to delete and then I can simply delete the table on dynamo D-B.
+
+00:37.340 --> 00:47.240
+So table name and then I'm going to simply say deleting a table in a print statement
+
+00:50.240 --> 00:56.960
+with name and table name and then I'm simply going to return.
+
+00:57.080 --> 00:59.800
+Self-taught Klein dot
+
+01:02.380 --> 01:03.920
+delete table.
+
+01:03.950 --> 01:06.250
+So this is the method that I'm looking for.
+
+01:06.250 --> 01:13.140
+And as you can see it has just a single parameter singer argument which has the table name itself.
+
+01:13.280 --> 01:21.470
+So I'm going to pass in the table name here and that's simply everything I have to do to delete a table
+
+01:21.470 --> 01:22.870
+on dynamo D-B.
+
+01:22.880 --> 01:27.010
+So let's go to our management class and from there.
+
+01:27.110 --> 01:34.580
+Let's add another method for deleting our table so delete table.
+
+01:35.180 --> 01:44.510
+And within this method we need to get dynamic DB client and delete the table with name so the table
+
+01:44.510 --> 01:48.430
+name is again it's going to be the movies table.
+
+01:48.470 --> 01:55.820
+So I'm going to Passim movies as the argument and the last thing that I'm going to do is I'm going to
+
+01:55.820 --> 02:05.170
+call this method so I can delete my table so I'm going to hit Crohn and let's see what's going to happen
+
+02:05.350 --> 02:07.660
+on a WS console.
+
+02:07.690 --> 02:14.450
+So our execution is complete and our table must have been deleted from a W-S console.
+
+02:14.470 --> 02:22.130
+So let's go back to our AWOS console and just refresh the page.
+
+02:22.230 --> 02:28.740
+And as you can see we don't have any dynamo D-B table on our dynamic DB dashboard.
+
+02:28.750 --> 02:35.860
+And we can see that Amazon is putting us back to the Getting Started page of Dynamo D-B.
+
+02:35.920 --> 02:39.190
+So we simply don't have any tables anymore.
+
+02:39.190 --> 02:49.860
+We could delete our movies database movies table from dynamo IDB so do a table on dynamo D-B is simple
+
+02:49.860 --> 02:52.800
+as that with both free and Python.

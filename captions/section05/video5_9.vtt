@@ -1,0 +1,100 @@
+WEBVTT
+
+00:01.960 --> 00:11.180
+So how are RLDS instance large ON A W-S and to connect to does post-career sequel instance.
+
+00:11.350 --> 00:17.950
+I'm using the post Tiko app which is a very lightweight co-aligned for connecting to post-career sequel
+
+00:17.980 --> 00:21.310
+instances on Mac OS and of hers.
+
+00:21.400 --> 00:29.320
+You can use puji adamant within any environment that you have pajama's MS simply works on Mac OS Linux
+
+00:29.530 --> 00:38.050
+and Windows of course and Politico is really simple and I highly recommend you to do to manipulate your
+
+00:38.090 --> 00:43.780
+audience instance for like simple tasks and basically about anything.
+
+00:44.200 --> 00:50.030
+So if you have created and downloaded posts Tiko I'm going to lunch.
+
+00:50.040 --> 00:55.100
+Post the code to connect to my RLDS instance and I'm going to show you dat.
+
+00:55.110 --> 01:01.910
+R r d s instance is publicly accessible from the network or over the Internet.
+
+01:02.110 --> 01:10.570
+So let's just type in post Tiko and within the post Tiko it is asking me to provide a nickname for my
+
+01:10.570 --> 01:19.450
+database so I'm going to say postscripts sequel both 3 and 40.
+
+01:19.450 --> 01:27.570
+HOST I'm going to go to my AWOS Casal and within my postscript sequel the B and if I just go back here
+
+01:27.840 --> 01:36.780
+it is now available so I can connect to it and if I hit to my D-B name under the K'NEX section I can
+
+01:36.780 --> 01:44.220
+see the end point for my database which is the DNS provided by AWOS instead of an IP.
+
+01:44.220 --> 01:54.150
+So I'm going to use that as my host and I'm going to use five four three two as my port and for the
+
+01:54.150 --> 01:55.110
+user.
+
+01:55.110 --> 02:00.670
+Let's check out our RLDS creation and see what we have for the user.
+
+02:00.690 --> 02:06.720
+So I'm going to use the my post postgresql password as my password.
+
+02:06.930 --> 02:11.940
+And let's just say postscripts and forward the password.
+
+02:12.000 --> 02:14.090
+I'm going to just paste it in.
+
+02:14.340 --> 02:19.700
+And the database name is my postscripts he call database.
+
+02:19.710 --> 02:21.030
+All right.
+
+02:21.030 --> 02:30.610
+So if I'm going to hit the connect button right now and the pulse Tiko can't find the identity of a
+
+02:30.680 --> 02:36.030
+with us this is kind of funny but you're going to have to hit connect.
+
+02:36.030 --> 02:43.540
+And here we go for connected to our RLDS postscripts he called instance or a W-S.
+
+02:44.000 --> 02:50.970
+And as you can see that we can simply query our database and we can check out the default catalogues
+
+02:51.030 --> 02:55.320
+and schemas on our database just like that.
+
+02:55.440 --> 02:56.400
+And here we go.
+
+02:56.460 --> 03:06.080
+We can just browse our baby and we can't even typing something as cool queries against our database.
+
+03:06.080 --> 03:10.320
+And let's just type in a simple query and let's just execute it.
+
+03:10.560 --> 03:19.250
+And you can see that Arcuri is working and can be validated against the pulse Grisi call instance.
+
+03:19.710 --> 03:26.260
+So this is the maybe the simplest way to connect to your audience post-career sequel instances.
+
+03:26.370 --> 03:30.540
+And I highly recommend using the post Tiko for that purpose.

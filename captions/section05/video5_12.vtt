@@ -1,0 +1,157 @@
+WEBVTT
+
+00:02.700 --> 00:06.600
+So we know how to modify our D-B instance.
+
+00:06.600 --> 00:15.380
+And what about taking a backup or a snapshot in terms of A W-S how to re.
+
+00:15.590 --> 00:20.320
+How can we take a backup of our RLDS DB instance.
+
+00:20.600 --> 00:30.500
+So to do that I'm going to go to my RTX class and from there after the modify method I'm going to say
+
+00:30.860 --> 00:40.870
+take Back-Up off for instance.
+
+00:40.880 --> 00:42.000
+All right.
+
+00:42.590 --> 00:47.150
+And within that backup method I'm going to simply say
+
+00:51.680 --> 00:55.310
+backing up the instance
+
+00:57.680 --> 01:06.380
+and within the method call I'm going to simply return self-taught client dot.
+
+01:06.500 --> 01:14.260
+And since this is the snapshot I'm going to have to create a DB snapshot.
+
+01:14.480 --> 01:17.290
+So this is the signature of the method.
+
+01:17.330 --> 01:25.610
+So the first thing to do I have to provide is the D-B instance identifier and the snapshot identifier
+
+01:25.610 --> 01:28.310
+that I can refer to the snapshot.
+
+01:28.550 --> 01:33.020
+And I can optionally of course provide tax to this method.
+
+01:33.020 --> 01:43.040
+So let's just pass in the DP identifier to this method so we can pass in anything we want to be backed
+
+01:43.040 --> 01:44.990
+up on top of us.
+
+01:45.020 --> 01:56.580
+And I'm also going to pass in the D-B instance identifier and I can simply pass in tax too.
+
+01:56.600 --> 01:57.860
+All right.
+
+01:57.860 --> 02:10.340
+So let's just say D-B instance identifier is D-B identifier and D-B snapshot identifier is going to
+
+02:10.340 --> 02:13.520
+be of course let's just rename this
+
+02:18.340 --> 02:26.950
+and DBI snapshot identifier and for the tax I'm going to say tax just like that.
+
+02:26.980 --> 02:34.100
+So let's go to our deployment class and just type in a new method.
+
+02:34.420 --> 02:41.190
+And within that new method take backup.
+
+02:41.620 --> 02:51.090
+And what I'm going to do now is I'm going to get our Yes and I'm going to call take backup of D-B instance.
+
+02:51.580 --> 02:59.710
+And again I'm going to have to provide my D-B instance identifier so that I'm going to take the backup
+
+02:59.710 --> 03:07.840
+of this D.B and I'm going to say my very first snapshot
+
+03:10.830 --> 03:18.870
+and what I have to provide else is the tax for my snapshot so I can identify it.
+
+03:18.870 --> 03:27.280
+So let's just create a dictionary for these tax and I'm going to provide an array of tax.
+
+03:27.570 --> 03:39.360
+And the first element of these tax are as the key value pairs again and I'm going to say key is name
+
+03:40.830 --> 03:50.370
+and the value for that key is going to be my first snapshot.
+
+03:50.870 --> 03:52.170
+All right.
+
+03:52.170 --> 03:53.170
+Just like that.
+
+03:53.250 --> 04:01.540
+So I can now passed this in to my method and I can just simply call this to see what's going to happen.
+
+04:01.590 --> 04:02.520
+All right.
+
+04:02.940 --> 04:14.580
+So let's just go down here and we can just now call this method as take back up and here we go.
+
+04:14.640 --> 04:17.880
+So I'm going to run this and let's see what's going to happen.
+
+04:20.010 --> 04:21.060
+All right.
+
+04:21.060 --> 04:23.620
+Our D-B instance must be backing up now.
+
+04:23.640 --> 04:28.250
+So let's go to AWOS castle and see what's happening.
+
+04:28.500 --> 04:36.030
+Let's go to instances and as you can see it is being backed up by a couple of us with our trigger from
+
+04:36.030 --> 04:38.080
+the Bothell 3 API.
+
+04:38.130 --> 04:45.840
+So it is now being backed up and we have to be seeing the back up being provisioned on the snapshot
+
+04:45.840 --> 04:46.940
+section.
+
+04:46.950 --> 04:49.710
+So as you can see we have two snapshots.
+
+04:49.710 --> 04:55.800
+The first snapshot was created by AWOS itself when we first launch our D-B instance.
+
+04:55.920 --> 05:02.840
+And the second one is the my very first snapshot that we created and it is still being created by a
+
+05:02.860 --> 05:04.360
+W-S.
+
+05:05.040 --> 05:11.100
+So we're going to have to wait for a little while to be processed and as you can see it's type is manual
+
+05:11.220 --> 05:12.640
+since we triggered it.
+
+05:12.870 --> 05:19.250
+And once you finish with that snapshot you're going to see that it is going to be available.
+
+05:19.560 --> 05:25.520
+But while taking this out you can see that our my first snapshot tag is already there.
+
+05:25.530 --> 05:30.100
+So taking a snapshot of your database is just like simple as that.

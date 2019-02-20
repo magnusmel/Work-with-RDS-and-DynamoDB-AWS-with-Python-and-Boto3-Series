@@ -1,0 +1,103 @@
+WEBVTT
+
+00:02.030 --> 00:05.980
+So what are we going to build on the scores and scores.
+
+00:06.110 --> 00:11.860
+We're going to start off with preparing our environment to work with Python and both of three.
+
+00:11.870 --> 00:13.720
+And of course a WS.
+
+00:13.850 --> 00:20.240
+So we'll first start with preparing our environment and credentials getting from AWOS So we're going
+
+00:20.240 --> 00:28.100
+to go to I am from AWOS our identity and access management and we're going to create ourselves a user.
+
+00:28.100 --> 00:34.550
+And after we finish with that we're going to create ourselves A W-S credential so that we can access
+
+00:34.580 --> 00:37.250
+AWOS benefits programmatically.
+
+00:37.250 --> 00:43.820
+So once we get the credentials we're going to set those credentials to our environment using a WSC a
+
+00:43.820 --> 00:50.780
+lie which brings us to the installation of a a lie and I'm going to be showing you the on Mac OS and
+
+00:50.780 --> 00:51.770
+Windows.
+
+00:52.010 --> 00:58.280
+And after we set up our environment we're going to launch our I.D. and we're going to start implementing
+
+00:58.280 --> 01:03.890
+our solution on us and our solutions starting from Arley Yes.
+
+01:03.890 --> 01:10.250
+So for RLDS what we're going to need is we're going to need some D-B subnet groups and security groups
+
+01:10.250 --> 01:14.150
+so that we can place our Ardis instance within those.
+
+01:14.150 --> 01:20.360
+So once we have our security groups and support groups for our D-B instance we're going to be able to
+
+01:20.360 --> 01:25.190
+launch our post-career siecle RDX instance with a W-S environment.
+
+01:25.400 --> 01:31.770
+And for that environment we're going to be using E.U. 3 or Paris region.
+
+01:31.950 --> 01:38.460
+And once we finish with our RDA assistance we're going to move on to Dynamo D-B.
+
+01:38.490 --> 01:46.230
+So for Dynamo D-B since it's a global solution from a double U.S. We're going to launch our tables on
+
+01:46.230 --> 01:47.660
+dynamo D-B.
+
+01:47.670 --> 01:54.150
+We're going to provide a table name and we're going to provide a provision throughput which is same
+
+01:54.150 --> 01:56.660
+thing for IOPS on AWOS.
+
+01:56.760 --> 01:59.610
+And then we're going to provide the key schema.
+
+01:59.820 --> 02:04.580
+And the last part of the table definition is the attribute definitions.
+
+02:04.650 --> 02:11.430
+So we're going to provide every single key and what the type of value they're expecting to get to and
+
+02:11.610 --> 02:18.270
+once we're done with that we're going to learn how to describe how to modify and how to operate a table
+
+02:18.540 --> 02:25.920
+on dynamo D.B and the same thing goes for our Yes we're going to learn how to take a snapshot or backup
+
+02:26.160 --> 02:28.340
+in general cases from our.
+
+02:28.530 --> 02:34.080
+And we're willing to learn how to restore a database from an existing snapshot or a backup.
+
+02:34.450 --> 02:39.830
+And we're also going to learn how we can modify our D.S. instance on AWOS.
+
+02:40.110 --> 02:46.750
+And of course without saying we're all going to learn how to describe the resources on a double unit
+
+02:46.860 --> 02:50.100
+for both our ideas and Dynamo D-B.
+
+02:50.100 --> 02:55.970
+So again this is going to be we're a hands on cause and I'm hoping you're going to like it because there
+
+02:55.970 --> 02:58.420
+is such a great content waiting for you site.
